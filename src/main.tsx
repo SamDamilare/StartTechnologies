@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <BrowserRouter>
       <ChakraProvider>
-        <App bgColor="#f2f2f2" />
+        <App  />
       </ChakraProvider>
     </BrowserRouter>
   </React.StrictMode>

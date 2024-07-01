@@ -31,6 +31,6 @@ class DemoCarousel extends Component {
             </Carousel>
         );
     }
-});
+};
 
 ReactDOM.render(<DemoCarousel />, document.querySelector('.demo-carousel'));
