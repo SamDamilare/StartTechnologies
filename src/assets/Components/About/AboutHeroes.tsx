@@ -6,7 +6,7 @@ const AboutHeroes = () => {
     <div>
       <VStack alignItems={"center"}>
         <Box mt="60px" w="952px">
-          <Text fontSize={"48px"} textAlign={"center"}>
+          <Text fontSize={"48px"} textAlign={"center"} fontWeight={600}>
             We are the Star of Design
           </Text>
         </Box>

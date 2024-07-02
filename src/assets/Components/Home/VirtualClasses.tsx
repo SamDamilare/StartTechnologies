@@ -1,4 +1,5 @@
 import React from "react";
+import SubmitCV from "../NewTabs/SubmitCV";
 import {
   Text,
   Image,
@@ -7,9 +8,18 @@ import {
   Box,
   Center,
   Flex,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const VirtualClasses = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
       <Box m="10">
@@ -30,11 +40,16 @@ const VirtualClasses = () => {
               //   alignItems="center"
               justifyContent={"center"}
             >
-              <Button bgColor="#a020f0" variant="solid" color="white">
+              <Button
+                bgColor="#a020f0"
+                variant="solid"
+                color="white"
+                onClick={onOpen}
+              >
                 Submit CV
               </Button>
               <Button colorScheme="none" variant="outline" color={"#a020f0"}>
-                Contact Us
+                <Link to="/contact">Contact Us</Link>
               </Button>
             </Flex>
           </Stack>
@@ -54,6 +69,21 @@ const VirtualClasses = () => {
           </Text>
         </Stack>
       </Center>
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+        <ModalOverlay />
+
+        <ModalContent bgColor="#f2f2f2" w="1000px" p="30px">
+          {/* <ModalHeader>
+              <Text fontSize={"45px"} fontWeight={600}>
+                Register for your Course today
+              </Text>
+            </ModalHeader> */}
+          <ModalCloseButton />
+          <ModalBody>
+            <SubmitCV />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 };

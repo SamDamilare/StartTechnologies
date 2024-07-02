@@ -12,6 +12,7 @@ import {
   SimpleGrid,
   HStack,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 import { coursesDetails } from "../../utilities/data";
 
 const CoursesCards = () => {
@@ -45,14 +46,16 @@ const CoursesCards = () => {
                     <Heading size="md">{item.header}</Heading>
                     <Text>{item.text}</Text>
                   </Stack>
-                  <Button
-                    variant="solid"
-                    colorScheme="none"
-                    color="#a020f0"
-                    mt="4"
-                  >
-                    {item.button}
-                  </Button>
+                  <Link to={item.link}>
+                    <Button
+                      variant="solid"
+                      colorScheme="none"
+                      color="#a020f0"
+                      mt="4"
+                    >
+                      {item.button}
+                    </Button>
+                  </Link>
                 </VStack>
               </CardBody>
             </Card>
@@ -82,14 +85,16 @@ const CoursesCards = () => {
                     <Heading size="md">{item.header}</Heading>
                     <Text>{item.text}</Text>
                   </Stack>
-                  <Button
-                    variant="solid"
-                    colorScheme="none"
-                    color="#a020f0"
-                    mt="4"
-                  >
-                    {item.button}
-                  </Button>
+                  <Link to={item.link}>
+                    <Button
+                      variant="solid"
+                      colorScheme="none"
+                      color="#a020f0"
+                      mt="4"
+                    >
+                      {item.button}
+                    </Button>
+                  </Link>
                 </VStack>
               </CardBody>
             </Card>

@@ -6,8 +6,14 @@ const HeroSection = () => {
     <div>
       <VStack alignItems={"center"}>
         <Box mt="60px" w="952px">
-          <Text fontSize={"48px"} textAlign={"center"}>
-            Accelerate Your Career in UI/UX Design
+          <Text
+            fontSize={"45px"}
+            textAlign={"center"}
+            fontWeight={600}
+            color="#a020f0"
+          >
+            Accelerate <span style={{ color: "#50585f" }}>Your Career in </span>
+            UI/UX Design
           </Text>
         </Box>
         <Box width="760px">

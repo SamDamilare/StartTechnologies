@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const coursesDetails = {
   first: [
     {
@@ -6,6 +8,7 @@ export const coursesDetails = {
       header: "User Interface Design",
       text: "Build your understanding of UI design basics by familiarizing yourself with common elements, best practices, trends, and features used by UI Designers today.",
       button: "Learn More",
+      link: "/uidesigncourse",
     },
     {
       image:
@@ -13,6 +16,7 @@ export const coursesDetails = {
       header: "User Experience Design",
       text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
       button: "Learn More",
+      link: "/uxdesigncourse",
     },
     {
       image:
@@ -20,6 +24,7 @@ export const coursesDetails = {
       header: "UI/UX Designs",
       text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
       button: "Learn More",
+      link: "/uiuxdesigncourse",
     },
   ],
   second: [
@@ -29,6 +34,7 @@ export const coursesDetails = {
       header: "Interaction Design",
       text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
       button: "Learn More",
+      Link: "/idcourse",
     },
     {
       image:
@@ -36,6 +42,7 @@ export const coursesDetails = {
       header: "Design Thinking",
       text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy",
       button: "Learn More",
+      link: "/dtcourse",
     },
     {
       image:
@@ -43,6 +50,7 @@ export const coursesDetails = {
       header: "UX Research",
       text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
       button: "Learn More",
+      link: "/uxresearch",
     },
   ],
 };

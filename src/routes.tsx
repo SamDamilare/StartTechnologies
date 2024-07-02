@@ -64,7 +64,7 @@ export default [
     name: "UXDesignCourse",
   },
   {
-    path: "/usresearch",
+    path: "/uxresearch",
     element: <UXResearch />,
     name: "UXResearch",
   },
