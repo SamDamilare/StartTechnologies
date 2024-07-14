@@ -1,10 +1,10 @@
-import React from "react";
+// import React from "react";
 import NavBar from "../assets/Components/NewTabs/NavBar";
 import AboutHeroes from "../assets/Components/About/AboutHeroes";
 import AboutWhoWeAre from "../assets/Components/About/AboutWhoWeAre";
 import AboutMission from "../assets/Components/About/AboutMission";
 import Footer from "../assets/Components/NewTabs/Footer";
-import Testimonials from "../assets/Components/NewTabs/Testimonials";
+// import Testimonials from "../assets/Components/NewTabs/Testimonials";
 
 const About = () => {
   return (
@@ -13,8 +13,7 @@ const About = () => {
       <AboutHeroes />
       <AboutWhoWeAre />
       <AboutMission />
-      {/* <Testimonials />
-      <AboutMission /> */}
+      {/* <Testimonials /> */}
 
       <Footer />
     </div>

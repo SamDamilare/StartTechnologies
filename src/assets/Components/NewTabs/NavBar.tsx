@@ -1,7 +1,6 @@
 import {
   Flex,
   Button,
-  HStack,
   chakra,
   Box,
   Text,
@@ -25,7 +24,6 @@ import {
 } from "@chakra-ui/react";
 import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Link } from "react-router-dom";
-import React from "react";
 import RegisterForm from "./RegisterForm";
 
 export default function NavBar() {

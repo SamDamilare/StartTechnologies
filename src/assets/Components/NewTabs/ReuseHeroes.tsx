@@ -1,13 +1,5 @@
-import {
-  Box,
-  VStack,
-  Flex,
-  Text,
-  GridItem,
-  SimpleGrid,
-} from "@chakra-ui/react";
-import { Link } from "react-router-dom";
-import React from "react";
+import { Box, VStack, Text, GridItem, SimpleGrid } from "@chakra-ui/react";
+
 import RegisterButton from "./RegisterButton";
 
 const ReuseHeroes = () => {

@@ -1,12 +1,9 @@
-import * as React from "react";
+// import * as React from "react";
 import {
   Heading,
   Text,
   Box,
-  Flex,
   Image,
-  Skeleton,
-  Link,
   SimpleGrid,
   GridItem,
   Center,

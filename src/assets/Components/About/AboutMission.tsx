@@ -1,15 +1,9 @@
-import * as React from "react";
+// import * as React from "react";
 import {
-  Container,
   Heading,
-  Stack,
-  HStack,
   Text,
   Box,
-  Flex,
   Image,
-  Skeleton,
-  Link,
   SimpleGrid,
   GridItem,
   Center,

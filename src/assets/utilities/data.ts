@@ -51,32 +51,6 @@ export const coursesDetails = {
       link: "/uxresearch",
     },
   ],
-  second: [
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-      header: "Interaction Design",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-      button: "Learn More",
-      Link: "/idcourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-      header: "Design Thinking",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy",
-      button: "Learn More",
-      link: "/dtcourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-      header: "UX Research",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-      button: "Learn More",
-      link: "/uxresearch",
-    },
-  ],
 };
 
 export const eventCards = () => [

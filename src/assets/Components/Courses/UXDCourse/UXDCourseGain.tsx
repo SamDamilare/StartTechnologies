@@ -1,13 +1,11 @@
-import React from "react";
+// import React from "react";
 import {
   Heading,
   VStack,
   Text,
   Box,
-  Flex,
   Image,
   SimpleGrid,
-  Grid,
   GridItem,
 } from "@chakra-ui/react";
 

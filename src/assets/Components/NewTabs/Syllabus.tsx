@@ -1,14 +1,11 @@
 import {
   Box,
   Button,
-  Flex,
   GridItem,
-  Heading,
   Image,
   SimpleGrid,
   Text,
 } from "@chakra-ui/react";
-import React from "react";
 
 const Syllabus = () => {
   return (

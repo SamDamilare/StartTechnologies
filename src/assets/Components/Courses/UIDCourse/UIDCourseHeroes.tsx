@@ -1,5 +1,5 @@
-import React from "react";
-import { Box, Text, Image, Button, Flex, VStack } from "@chakra-ui/react";
+// import React from "react";
+import { Box, Text, Image, VStack } from "@chakra-ui/react";
 import ReuseHeroes from "../../NewTabs/ReuseHeroes";
 
 const UIDCourseHeroes = () => {

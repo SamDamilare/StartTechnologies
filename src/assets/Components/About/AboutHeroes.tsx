@@ -1,5 +1,5 @@
 import { Image, Box, VStack, Heading, Text, Center } from "@chakra-ui/react";
-import React from "react";
+// import React from "react";
 
 const AboutHeroes = () => {
   return (

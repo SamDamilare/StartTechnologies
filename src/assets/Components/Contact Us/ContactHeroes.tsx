@@ -1,4 +1,4 @@
-import React from "react";
+// import React from "react";
 import { Text, Box, VStack, Image } from "@chakra-ui/react";
 
 const ContactHeroes = () => {

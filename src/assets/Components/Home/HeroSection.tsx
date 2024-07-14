@@ -1,14 +1,12 @@
-import React from "react";
+// import React from "react";
 import {
   Text,
   Box,
   VStack,
-  Button,
   Image,
   Modal,
   ModalOverlay,
   ModalContent,
-  ModalHeader,
   ModalCloseButton,
   ModalBody,
   useDisclosure,
