@@ -5,6 +5,8 @@ import UXResearchJourney from "../../assets/Components/Courses/UXResearch/UXRese
 import UXResearchEnroll from "../../assets/Components/Courses/UXResearch/UXResearchEnroll";
 import UXResearchGain from "../../assets/Components/Courses/UXResearch/UXResearchGain";
 import Footer from "../../assets/Components/NewTabs/Footer";
+import Syllabus from "../../assets/Components/NewTabs/Syllabus";
+import Testimonials from "../../assets/Components/NewTabs/Testimonials";
 
 const UXResearch = () => {
   return (
@@ -14,6 +16,8 @@ const UXResearch = () => {
       <UXResearchJourney />
       <UXResearchEnroll />
       <UXResearchGain />
+      <Syllabus />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

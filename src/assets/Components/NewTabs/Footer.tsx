@@ -246,7 +246,7 @@ const Footer = () => {
       color={"white"}
       mt="160px"
     >
-      <Grid templateColumns="repeat(3, 1fr)">
+      <Grid templateColumns="repeat(3, 1fr)" ml="60px">
         <GridItem
           colSpan={[3, 3, 3, 1]}
           mb={["32px", "32px", "40px", "0px"]}
@@ -254,7 +254,11 @@ const Footer = () => {
           justifyContent={"space-between"}
         >
           <Text>SSD</Text>
-          <Text fontSize={"xs"} mt="155px">
+          <Text
+            fontSize={"xs"}
+            mt={{ base: "none", md: "none", lg: "155px" }}
+            w={{ base: "200px", md: "200px", lg: "100%" }}
+          >
             © 2024 Star School of Design. All rights reserved
           </Text>
         </GridItem>

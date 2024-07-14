@@ -6,10 +6,14 @@ const UIUXDCourseHeroes = () => {
   return (
     <div>
       <Box>
-        <VStack alignItems={"center"}>
-          <Box mt="60px" w="952px">
+        <VStack
+          alignItems={"center"}
+          ml={{ base: "20px", md: "20px", lg: "160px" }}
+          mr={{ base: "20px", md: "20px", lg: "160px" }}
+        >
+          <Box mt="60px" w={{ base: "300px", md: "600px", lg: "952px" }}>
             <Text
-              fontSize={"48px"}
+              fontSize={{ base: "20px", md: "40px", lg: "45px" }}
               textAlign={"center"}
               fontWeight={600}
               color="#50585f"
@@ -19,7 +23,7 @@ const UIUXDCourseHeroes = () => {
           </Box>
           <ReuseHeroes />
           <Image
-            w="58%"
+            w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="40px"
             src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719758553/SSD/Rectangle_1_lkiet5.png"
           />

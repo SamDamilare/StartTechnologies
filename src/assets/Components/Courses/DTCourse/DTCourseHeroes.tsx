@@ -6,10 +6,14 @@ const DTCourseHeroes = () => {
   return (
     <div>
       <Box>
-        <VStack alignItems={"center"}>
-          <Box mt="60px" w="952px">
+        <VStack
+          ml={{ base: "20px", md: "20px", lg: "160px" }}
+          mr={{ base: "20px", md: "20px", lg: "160px" }}
+          alignItems={"center"}
+        >
+          <Box mt="60px" w={{ base: "300px", md: "600px", lg: "952px" }}>
             <Text
-              fontSize={"48px"}
+              fontSize={{ base: "20px", md: "40px", lg: "45px" }}
               textAlign={"center"}
               fontWeight={600}
               color="#50585f"
@@ -20,7 +24,7 @@ const DTCourseHeroes = () => {
 
           <ReuseHeroes />
           <Image
-            w="58%"
+            w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="40px"
             src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719742838/SSD/Rectangle_1_2_ac9rke.png"
           />

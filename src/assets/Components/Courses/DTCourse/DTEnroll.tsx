@@ -10,17 +10,27 @@ import {
   Image,
   Skeleton,
   Link,
+  SimpleGrid,
+  GridItem,
 } from "@chakra-ui/react";
 
 const DTEnroll = () => {
   return (
     <div>
-      <Box ml="160px" mr="160px" mt="100px">
-        <Flex justifyContent={"space-between"} alignItems={"end"}>
-          <Box w="30vw">
+      <Box
+        ml={{ base: "20px", md: "30px", lg: "160px" }}
+        mr={{ base: "20px", md: "30px", lg: "160px" }}
+        mt="100px"
+      >
+        <SimpleGrid
+          columns={{ base: 1, md: 1, lg: 2 }}
+          gap={{ base: "40px", md: "40px", lg: "70px" }}
+          alignItems={"end"}
+        >
+          <GridItem>
             <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719750145/SSD/Frame_55_rutxdh.png" />
-          </Box>
-          <Box w="30vw">
+          </GridItem>
+          <GridItem>
             <Heading>Enroll with us Today</Heading>
             <Text fontSize={"sm"}>
               You can enroll in a Star School of Design course anytime online.
@@ -34,8 +44,8 @@ const DTEnroll = () => {
               know in advance of your course kick-off so you’re prepared and
               ready to thrive.
             </Text>
-          </Box>
-        </Flex>
+          </GridItem>
+        </SimpleGrid>
       </Box>
     </div>
   );

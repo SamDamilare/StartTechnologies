@@ -1,81 +1,103 @@
-import { Box, VStack, Flex, Text } from "@chakra-ui/react";
+import {
+  Box,
+  VStack,
+  Flex,
+  Text,
+  GridItem,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import React from "react";
+import RegisterButton from "./RegisterButton";
 
 const ReuseHeroes = () => {
   return (
     <div>
       <VStack>
-        <Box width="760px">
-          <Text fontSize={"20px"} textAlign={"center"}>
+        <Box w={{ base: "300px", md: "800px", lg: "952px" }}>
+          <Text
+            fontSize={{ base: "xs", md: "sm", lg: "20px" }}
+            textAlign={"center"}
+          >
             Design High-Impact User Experiences. Research, design, and prototype
             effective, visually-driven websites and apps.
           </Text>
         </Box>
 
-        <Box mt="40px">
-          <Flex alignItems={"center"} gap={"32px"}>
-            <Box
-              bgColor={"#edd3ff"}
-              color={"#a020f0"}
-              px="16px"
-              py="12px"
-              borderRadius={"5px"}
-            >
-              Live Classrom
-            </Box>
-            <Box
-              bgColor={"#edd3ff"}
-              color={"#a020f0"}
-              px="16px"
-              py="12px"
-              borderRadius={"5px"}
-            >
-              4 Months
-            </Box>
-            <Box
-              bgColor={"#edd3ff"}
-              color={"#a020f0"}
-              px="16px"
-              py="12px"
-              borderRadius={"5px"}
-            >
-              Expert Instructions
-            </Box>
-            <Box
-              bgColor={"#edd3ff"}
-              color={"#a020f0"}
-              px="16px"
-              py="12px"
-              borderRadius={"5px"}
-            >
-              Certificate
-            </Box>
-            <Box
-              bgColor={"#edd3ff"}
-              color={"#a020f0"}
-              px="16px"
-              py="12px"
-              borderRadius={"5px"}
-            >
-              Internship
-            </Box>
-          </Flex>
-        </Box>
-        <Link to="">
-          <Box
-            mt="40px"
-            bgColor={"#a020f0"}
-            color={"white"}
-            width={"150px"}
-            borderRadius={"5px"}
-            alignContent={"center"}
-            height={"50px"}
+        <Box mt={{ base: "10px", md: "30px", lg: "40px" }}>
+          <SimpleGrid
+            columns={{ base: 1, md: 3, lg: 5 }}
+            alignItems={"center"}
+            gap={{ base: "10px", md: "20px", lg: "32px" }}
+            fontSize={"small"}
             textAlign={"center"}
           >
-            Register
-          </Box>
-        </Link>
+            <GridItem>
+              {" "}
+              <Box
+                bgColor={"#edd3ff"}
+                color={"#a020f0"}
+                px="16px"
+                py="12px"
+                w="auto"
+                borderRadius={"5px"}
+              >
+                Live Classrom
+              </Box>
+            </GridItem>
+            <GridItem>
+              {" "}
+              <Box
+                bgColor={"#edd3ff"}
+                color={"#a020f0"}
+                w="auto"
+                px="16px"
+                py="12px"
+                borderRadius={"5px"}
+              >
+                4 Months
+              </Box>
+            </GridItem>
+            <GridItem>
+              {" "}
+              <Box
+                bgColor={"#edd3ff"}
+                color={"#a020f0"}
+                px="16px"
+                w="auto"
+                py="12px"
+                borderRadius={"5px"}
+              >
+                Expert Instructions
+              </Box>
+            </GridItem>
+            <GridItem>
+              <Box
+                bgColor={"#edd3ff"}
+                color={"#a020f0"}
+                px="16px"
+                py="12px"
+                w="auto"
+                borderRadius={"5px"}
+              >
+                Certificate
+              </Box>
+            </GridItem>
+            <GridItem>
+              <Box
+                bgColor={"#edd3ff"}
+                color={"#a020f0"}
+                px="16px"
+                py="12px"
+                w="auto"
+                borderRadius={"5px"}
+              >
+                Internship
+              </Box>
+            </GridItem>
+          </SimpleGrid>
+        </Box>
+        <RegisterButton />
       </VStack>
     </div>
   );

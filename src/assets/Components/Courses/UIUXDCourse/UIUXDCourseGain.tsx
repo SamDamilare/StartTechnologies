@@ -1,12 +1,29 @@
 import React from "react";
-import { Heading, VStack, Text, Box, Flex, Image } from "@chakra-ui/react";
+import {
+  Heading,
+  VStack,
+  Text,
+  Box,
+  Flex,
+  Image,
+  SimpleGrid,
+  GridItem,
+} from "@chakra-ui/react";
 
 const UIUXDCourseGain = () => {
   return (
     <div>
-      <Box ml="160px" mr="160px" mt="100px">
-        <Flex justifyContent={"space-between"} alignItems={"start"}>
-          <Box w="30vw">
+      <Box
+        ml={{ base: "20px", md: "30px", lg: "160px" }}
+        mr={{ base: "20px", md: "30px", lg: "160px" }}
+        mt="100px"
+      >
+        <SimpleGrid
+          columns={{ base: 1, md: 1, lg: 2 }}
+          gap={{ base: "40px", md: "40px", lg: "70px" }}
+          alignItems={"start"}
+        >
+          <GridItem>
             <VStack alignItems={"start"}>
               <Heading fontSize={"2xl"}>
                 Why start your journey with us?
@@ -51,11 +68,11 @@ const UIUXDCourseGain = () => {
                 future. Join us and start your UI design journey today!
               </Text>
             </VStack>
-          </Box>
-          <Box w="30vw">
+          </GridItem>
+          <GridItem>
             <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719758063/SSD/Frame_44_lofpds.png" />
-          </Box>
-        </Flex>
+          </GridItem>
+        </SimpleGrid>
       </Box>
     </div>
   );

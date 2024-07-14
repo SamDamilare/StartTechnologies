@@ -1,9 +1,7 @@
 import { Navigate } from "react-router-dom";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
-import Courses from "./Pages/Courses";
 import Home from "./Pages/Home";
-import Register from "./Pages/Register";
 import UXResearch from "./Pages/CoursesPages/UXResearch";
 import UXDesignCourse from "./Pages/CoursesPages/UXDesignCourse";
 import UIUXDesignCourse from "./Pages/CoursesPages/UIUXDesignCourse";
@@ -28,16 +26,6 @@ export default [
     name: "Contact",
   },
 
-  {
-    path: "/courses",
-    element: <Courses />,
-    name: "Courses",
-  },
-  {
-    path: "/register",
-    element: <Register />,
-    name: "Register",
-  },
   {
     path: "/dtcourse",
     element: <DTCourse />,

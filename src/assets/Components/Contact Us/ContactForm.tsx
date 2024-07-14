@@ -14,7 +14,7 @@ const ContactForm = () => {
     <div>
       <Center>
         <Box
-          w="350px"
+          w={{ base: "300px", md: "250px", lg: "350px" }}
           bg="white"
           p="20px"
           border={"black"}

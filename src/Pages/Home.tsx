@@ -5,6 +5,7 @@ import CoursesCards from "../assets/Components/Home/CoursesCards";
 import VirtualClasses from "../assets/Components/Home/VirtualClasses";
 import Events from "../assets/Components/Home/Events";
 import Footer from "../assets/Components/NewTabs/Footer";
+import Internships from "../assets/Components/Home/Internships";
 import Testimonials from "../assets/Components/NewTabs/Testimonials";
 
 const Home = () => {
@@ -13,9 +14,10 @@ const Home = () => {
       <NavBar />
       <HeroSection />
       <CoursesCards />
-      <VirtualClasses />
+      {/* <VirtualClasses /> */}
+      {/* <Internships /> */}
       <Events />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Footer />
     </div>
   );

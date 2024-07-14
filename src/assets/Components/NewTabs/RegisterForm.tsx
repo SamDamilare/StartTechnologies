@@ -16,10 +16,14 @@ const RegisterForm = () => {
     <div>
       <Center>
         <VStack fontFamily={"poppins"}>
-          <Text fontWeight={500} fontSize={"30px"}>
+          <Text
+            fontWeight={500}
+            fontSize={"30px"}
+            w={{ base: "300px", md: "300px", lg: "400px" }}
+          >
             Register for your Course Today
           </Text>
-          <Text fontSize={"sm"}>
+          <Text fontSize={"sm"} w={{ base: "300px", md: "300px", lg: "400px" }}>
             Input all your details and we will get back to you via your email.
           </Text>
           <Box
@@ -27,7 +31,7 @@ const RegisterForm = () => {
             p="30px"
             borderRadius={"15px"}
             boxShadow={"100px black"}
-            w="400px"
+            w={{ base: "300px", md: "300px", lg: "400px" }}
             mt={4}
           >
             <FormControl>
