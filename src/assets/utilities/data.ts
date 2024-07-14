@@ -1,57 +1,53 @@
-import { Link } from "react-router-dom";
-
-export const coursesDetails = {
-  first: [
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853394/SSD/Rectangle_2_aontev.png",
-      header: "User Interface Design",
-      text: "Build your understanding of UI design basics by familiarizing yourself with common elements, best practices, trends, and features used by UI Designers today.",
-      button: "Learn More",
-      link: "/uidesigncourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853391/SSD/Rectangle_2_1_ambcge.png",
-      header: "User Experience Design",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-      button: "Learn More",
-      link: "/uxdesigncourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853388/SSD/Rectangle_2_2_systff.png",
-      header: "UI/UX Designs",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-      button: "Learn More",
-      link: "/uiuxdesigncourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-      header: "Interaction Design",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-      button: "Learn More",
-      Link: "/idcourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-      header: "Design Thinking",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy",
-      button: "Learn More",
-      link: "/dtcourse",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-      header: "UX Research",
-      text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-      button: "Learn More",
-      link: "/uxresearch",
-    },
-  ],
-};
+export const coursesDetails = () => [
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853394/SSD/Rectangle_2_aontev.png",
+    header: "User Interface Design",
+    text: "Build your understanding of UI design basics by familiarizing yourself with common elements, best practices, trends, and features used by UI Designers today.",
+    button: "Learn More",
+    link: "/uidesigncourse",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853391/SSD/Rectangle_2_1_ambcge.png",
+    header: "User Experience Design",
+    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+    button: "Learn More",
+    link: "/uxdesigncourse",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853388/SSD/Rectangle_2_2_systff.png",
+    header: "UI/UX Designs",
+    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+    button: "Learn More",
+    link: "/uiuxdesigncourse",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
+    header: "Interaction Design",
+    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+    button: "Learn More",
+    Link: "/idcourse",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
+    header: "Design Thinking",
+    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy",
+    button: "Learn More",
+    link: "/dtcourse",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
+    header: "UX Research",
+    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+    button: "Learn More",
+    link: "/uxresearch",
+  },
+];
 
 export const eventCards = () => [
   {

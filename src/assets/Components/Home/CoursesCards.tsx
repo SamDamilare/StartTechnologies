@@ -33,7 +33,7 @@ const CoursesCards = () => {
         mt="10"
         // Remove unnecessary margins
       >
-        {coursesDetails.first.map((item, idx) => (
+        {coursesDetails().map((item, idx) => (
           <Center>
             <GridItem key={idx}>
               <Card w={{ base: "300px", md: "300px", lg: "300px" }}>
