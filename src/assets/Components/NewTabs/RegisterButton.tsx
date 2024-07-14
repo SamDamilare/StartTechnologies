@@ -37,7 +37,7 @@ const RegisterButton = () => {
       </Link>
       <Center>
         <Modal isOpen={isOpen} onClose={onClose} size={modalSize}>
-          <ModalOverlay base="transparent" lg="100%" />
+          <ModalOverlay />
           <ModalContent bgColor={{ base: "transparent", lg: "#f2f2f2" }}>
             <ModalCloseButton />
             <ModalBody>

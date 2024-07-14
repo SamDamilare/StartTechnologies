@@ -1,4 +1,4 @@
-import { Image, Box, VStack, Heading, Text, Center } from "@chakra-ui/react";
+import { Image, Box, VStack, Text, Center } from "@chakra-ui/react";
 // import React from "react";
 
 const AboutHeroes = () => {

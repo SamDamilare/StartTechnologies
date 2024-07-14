@@ -44,7 +44,7 @@ const CoursesCards = () => {
                       <Heading size="md">{item.header}</Heading>
                       <Text fontSize={"sm"}>{item.text}</Text>
                     </Stack>
-                    <Link to={item.link}>
+                    <Link to="{item.link}">
                       <Button
                         variant="solid"
                         colorScheme="none"

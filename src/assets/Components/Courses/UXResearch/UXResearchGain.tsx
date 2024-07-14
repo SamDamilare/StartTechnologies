@@ -1,10 +1,9 @@
-import React from "react";
+// import React from "react";
 import {
   Heading,
   VStack,
   Text,
   Box,
-  Flex,
   Image,
   SimpleGrid,
   GridItem,

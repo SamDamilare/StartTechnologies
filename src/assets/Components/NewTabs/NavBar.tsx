@@ -54,7 +54,7 @@ export default function NavBar() {
           gap="240px"
           alignItems={"center"}
         >
-          <Flex spacing="2" mr="auto" alignItems={"center"}>
+          <Flex gap="2" mr="auto" alignItems={"center"}>
             <Box p="8px">
               <Link to="/">Home</Link>
             </Box>
