@@ -27,7 +27,7 @@ const Testimonials = () => {
   return (
     <Box
       py={10}
-      w={{ base: "none", md: "none", lg: "100%" }}
+      // w={{ base: "none", md: "none", lg: "100%" }}
       ml={{ base: "20px", md: "20px", lg: "160px" }}
       mr={{ base: "20px", md: "20px", lg: "160px" }}
     >
@@ -55,17 +55,19 @@ const Testimonials = () => {
         autoPlay={false}
         autoPlaySpeed={3000}
         infinite={true}
+        showDots={true}
       >
         {testimonyCards().map((item, idx) => (
           <Box
             key={idx}
             textAlign={"center"}
-            w={{ base: "250px", md: "300px", lg: "100%" }}
+            w={{ base: "250px", md: "300px", lg: "300px" }}
             bgColor={"white"}
             borderRadius={"10px"}
             p="20px"
+            mt={4}
             mx={{ base: 2, lg: 4 }}
-            minH={"250px"}
+            height={"250px"}
             boxShadow={"md"}
           >
             <Text
@@ -74,7 +76,7 @@ const Testimonials = () => {
             >
               {item.header}
             </Text>
-            <Text fontSize={{ base: "sm", md: "md", lg: "lg" }} mt="10px">
+            <Text fontSize={{ base: "sm", md: "sm", lg: "sm" }} mt="10px">
               {item.text}
             </Text>
             <Flex

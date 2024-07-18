@@ -1,5 +1,4 @@
 import { Box, VStack, Text, Image, Center } from "@chakra-ui/react";
-import React from "react";
 
 const VirtualClasses = () => {
   return (
