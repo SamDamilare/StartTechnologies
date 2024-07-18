@@ -49,53 +49,54 @@ const Testimonials = () => {
           </Text>
         </Stack>
       </Center>
-
-      <Carousel
-        responsive={responsive}
-        autoPlay={false}
-        autoPlaySpeed={3000}
-        infinite={true}
-        showDots={true}
-      >
-        {testimonyCards().map((item, idx) => (
-          <Box
-            key={idx}
-            textAlign={"center"}
-            w={{ base: "250px", md: "300px", lg: "300px" }}
-            bgColor={"white"}
-            borderRadius={"10px"}
-            p="20px"
-            mt={4}
-            mx={{ base: 2, lg: 4 }}
-            height={"250px"}
-            boxShadow={"md"}
-          >
-            <Text
-              fontSize={{ base: "md", md: "lg", lg: "xl" }}
-              fontWeight={500}
+      <Center>
+        <Carousel
+          responsive={responsive}
+          autoPlay={false}
+          autoPlaySpeed={3000}
+          infinite={true}
+          showDots={true}
+        >
+          {testimonyCards().map((item, idx) => (
+            <Box
+              key={idx}
+              textAlign={"center"}
+              w={{ base: "250px", md: "300px", lg: "300px" }}
+              bgColor={"white"}
+              borderRadius={"10px"}
+              p="20px"
+              mt={4}
+              mx={{ base: 2, lg: 4 }}
+              height={"250px"}
+              boxShadow={"md"}
             >
-              {item.header}
-            </Text>
-            <Text fontSize={{ base: "sm", md: "sm", lg: "sm" }} mt="10px">
-              {item.text}
-            </Text>
-            <Flex
-              justifyContent={"center"}
-              gap="10px"
-              alignItems={"center"}
-              mt="20px"
-            >
-              <Image src={item.image} boxSize={"50px"} borderRadius="full" />
-              <Box fontSize={"sm"} textAlign={"left"}>
-                <Text fontWeight={500}>{item.name}</Text>
-                <Text fontStyle={"italic"} color={"#a020f0"} mt={1}>
-                  {item.position}
-                </Text>
-              </Box>
-            </Flex>
-          </Box>
-        ))}
-      </Carousel>
+              <Text
+                fontSize={{ base: "md", md: "lg", lg: "xl" }}
+                fontWeight={500}
+              >
+                {item.header}
+              </Text>
+              <Text fontSize={{ base: "sm", md: "sm", lg: "sm" }} mt="10px">
+                {item.text}
+              </Text>
+              <Flex
+                justifyContent={"center"}
+                gap="10px"
+                alignItems={"center"}
+                mt="20px"
+              >
+                <Image src={item.image} boxSize={"50px"} borderRadius="full" />
+                <Box fontSize={"sm"} textAlign={"left"}>
+                  <Text fontWeight={500}>{item.name}</Text>
+                  <Text fontStyle={"italic"} color={"#a020f0"} mt={1}>
+                    {item.position}
+                  </Text>
+                </Box>
+              </Flex>
+            </Box>
+          ))}
+        </Carousel>
+      </Center>
     </Box>
   );
 };
