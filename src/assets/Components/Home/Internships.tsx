@@ -6,9 +6,18 @@ import {
   Center,
   SimpleGrid,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
+import SubmitCV from "../NewTabs/SubmitCV";
 
 const VirtualClasses = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <div>
       <Box
@@ -32,21 +41,29 @@ const VirtualClasses = () => {
           <Box>
             <SimpleGrid
               columns={{ base: 1, md: 1, lg: 2 }}
-              gap={{ base: "40px", md: "40px", lg: "70px" }}
+              gap={{ base: "20px", md: "20px", lg: "40px" }}
               w={{ base: "300px", md: "350px", lg: "400px" }}
               mt="40px"
             >
-              <Button bgColor={"#f6ebfe"} color={"white"}>
+              <Button
+                w={{ base: "full", md: "full", lg: "150px" }}
+                bgColor={"#a020ef"}
+                color={"white"}
+                onClick={onOpen}
+              >
                 Submit CV
               </Button>
-              <Button
-                bgColor={"transparent"}
-                colorScheme="#f6ebfe"
-                variant="outline"
-                color={"f6ebfe"}
-              >
-                Contact Us
-              </Button>
+              <Link to="/contact">
+                <Button
+                  bgColor={"transparent"}
+                  colorScheme="#a020ef"
+                  variant="outline"
+                  color={"#a020ef"}
+                  w={{ base: "full", md: "full", lg: "150px" }}
+                >
+                  Contact Us
+                </Button>
+              </Link>
             </SimpleGrid>
           </Box>
 
@@ -57,6 +74,21 @@ const VirtualClasses = () => {
           />
         </VStack>
       </Box>
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+        <ModalOverlay />
+
+        <ModalContent bgColor="#f2f2f2" w="1000px" p="30px">
+          {/* <ModalHeader>
+              <Text fontSize={"45px"} fontWeight={600}>
+                Register for your Course today
+              </Text>
+            </ModalHeader> */}
+          <ModalCloseButton />
+          <ModalBody>
+            <SubmitCV />
+          </ModalBody>
+        </ModalContent>
+      </Modal>
     </div>
   );
 };
