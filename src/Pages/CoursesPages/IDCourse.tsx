@@ -5,7 +5,7 @@ import IDCourseJourney from "../../assets/Components/Courses/IDCourse/IDCourseJo
 import IDCourseEnroll from "../../assets/Components/Courses/IDCourse/IDCourseEnroll";
 import IDCourseGain from "../../assets/Components/Courses/IDCourse/IDCourseGain";
 import Footer from "../../assets/Components/NewTabs/Footer";
-// import Testimonials from "../../assets/Components/NewTabs/Testimonials";
+import Testimonials from "../../assets/Components/NewTabs/Testimonials";
 import Syllabus from "../../assets/Components/NewTabs/Syllabus";
 
 const IDCourse = () => {
@@ -17,7 +17,7 @@ const IDCourse = () => {
       <IDCourseEnroll />
       <IDCourseGain />
       <Syllabus />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Footer />
     </div>
   );

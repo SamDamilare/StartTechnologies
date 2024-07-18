@@ -5,7 +5,7 @@ import UXDCourseJourney from "../../assets/Components/Courses/UXDCourse/UXDCours
 import UXDCourseEnroll from "../../assets/Components/Courses/UXDCourse/UXDCourseEnroll";
 import UXDCourseGain from "../../assets/Components/Courses/UXDCourse/UXDCourseGain";
 import Footer from "../../assets/Components/NewTabs/Footer";
-// import Testimonials from "../../assets/Components/NewTabs/Testimonials";
+import Testimonials from "../../assets/Components/NewTabs/Testimonials";
 import Syllabus from "../../assets/Components/NewTabs/Syllabus";
 
 const UXDesignCourse = () => {
@@ -17,7 +17,7 @@ const UXDesignCourse = () => {
       <UXDCourseEnroll />
       <UXDCourseGain />
       <Syllabus />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Footer />
     </div>
   );

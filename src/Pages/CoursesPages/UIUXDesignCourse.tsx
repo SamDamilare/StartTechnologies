@@ -5,7 +5,7 @@ import UIUXCourseJourney from "../../assets/Components/Courses/UIUXDCourse/UIUXC
 import UIUXDCourseEnroll from "../../assets/Components/Courses/UIUXDCourse/UIUXDCourseEnroll";
 import UIUXDCourseGain from "../../assets/Components/Courses/UIUXDCourse/UIUXDCourseGain";
 import Footer from "../../assets/Components/NewTabs/Footer";
-// import Testimonials from "../../assets/Components/NewTabs/Testimonials";
+import Testimonials from "../../assets/Components/NewTabs/Testimonials";
 import Syllabus from "../../assets/Components/NewTabs/Syllabus";
 
 const UIUXDesignCourse = () => {
@@ -17,7 +17,7 @@ const UIUXDesignCourse = () => {
       <UIUXDCourseEnroll />
       <UIUXDCourseGain />
       <Syllabus />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Footer />
     </div>
   );

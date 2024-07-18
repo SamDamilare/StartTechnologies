@@ -5,7 +5,7 @@ import UIDCourseJourney from "../../assets/Components/Courses/UIDCourse/UIDCours
 import UIDCourseEnroll from "../../assets/Components/Courses/UIDCourse/UIDCourseEnroll";
 import UIDCourseGain from "../../assets/Components/Courses/UIDCourse/UIDCourseGain";
 import Footer from "../../assets/Components/NewTabs/Footer";
-// import Testimonials from "../../assets/Components/NewTabs/Testimonials";
+import Testimonials from "../../assets/Components/NewTabs/Testimonials";
 import Syllabus from "../../assets/Components/NewTabs/Syllabus";
 
 const UIDesignCourse = () => {
@@ -17,7 +17,7 @@ const UIDesignCourse = () => {
       <UIDCourseEnroll />
       <UIDCourseGain />
       <Syllabus />
-      {/* <Testimonials /> */}
+      <Testimonials />
       <Footer />
     </div>
   );
