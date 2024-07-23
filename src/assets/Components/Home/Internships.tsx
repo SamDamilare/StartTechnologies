@@ -50,6 +50,7 @@ const VirtualClasses = () => {
                 bgColor={"#a020ef"}
                 color={"white"}
                 onClick={onOpen}
+                id="register"
               >
                 Submit CV
               </Button>

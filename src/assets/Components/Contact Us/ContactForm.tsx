@@ -27,9 +27,9 @@ const ContactForm = () => {
             <FormLabel>Full name</FormLabel>
             <Input placeholder="Full name" type="text" />
             <FormLabel mt={2}>Email</FormLabel>
-            <Input placeholder="Full name" type="text" />
+            <Input placeholder="Email" type="text" />
             <FormLabel mt={2}>Full name</FormLabel>
-            <Textarea />
+            <Textarea placeholder="Type your message here..." />
             <Button bgColor="#a020f0" color="white" w="full" mt="20px">
               Submit
             </Button>

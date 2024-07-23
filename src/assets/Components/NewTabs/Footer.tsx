@@ -20,7 +20,11 @@ const Footer = () => {
       color={"white"}
       mt="160px"
     >
-      <Grid templateColumns="repeat(3, 1fr)" ml="60px">
+      <Grid
+        templateColumns="repeat(3, 1fr)"
+        ml={{ base: "10px", md: "50px", lg: "130px" }}
+        mr={{ base: "10px", md: "50px", lg: "130px" }}
+      >
         <GridItem
           colSpan={[3, 3, 3, 1]}
           mb={["32px", "32px", "40px", "0px"]}

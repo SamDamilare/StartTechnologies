@@ -14,6 +14,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import RegisterForm from "../NewTabs/RegisterForm";
+import "../../style.css";
 
 const HeroSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -56,6 +57,7 @@ const HeroSection = () => {
               textAlign={"center"}
               onClick={onOpen}
               fontSize={{ base: "sm", md: "md", lg: "md" }}
+              id="register"
             >
               Register
             </Box>

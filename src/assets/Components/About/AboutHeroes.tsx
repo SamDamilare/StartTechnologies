@@ -15,13 +15,25 @@ const AboutHeroes = () => {
               fontSize={{ base: "20px", md: "40px", lg: "45px" }}
               textAlign={{ base: "start", md: "start", lg: "center" }}
               fontWeight={600}
+              color="#50585f"
             >
-              We are the Star of Design
+              We are the <span style={{ color: "#a020ef" }}>Star </span>of
+              <span
+                style={{
+                  background:
+                    "radial-gradient(circle at 10% 20%, rgb(164, 38, 199) 0.1%, rgb(65, 220, 255) 90.1%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                {" "}
+                Design
+              </span>
             </Text>
           </Box>
-          <Box w={{ base: "300px", md: "600px", lg: "952px" }}>
+          <Box w={{ base: "300px", md: "600px", lg: "800px" }}>
             <Text
-              fontSize={{ base: "xs", md: "sm", lg: "20px" }}
+              fontSize={{ base: "xs", md: "sm", lg: "md" }}
               textAlign={{ base: "start", md: "start", lg: "center" }}
             >
               There has never been a better time in history to build digital

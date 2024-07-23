@@ -1,3 +1,195 @@
+// import {
+//   Flex,
+//   Button,
+//   chakra,
+//   Box,
+//   Text,
+//   Menu,
+//   MenuButton,
+//   MenuList,
+//   MenuItem,
+//   Modal,
+//   ModalOverlay,
+//   ModalContent,
+//   ModalCloseButton,
+//   ModalBody,
+//   useDisclosure,
+//   Drawer,
+//   DrawerBody,
+//   DrawerOverlay,
+//   DrawerContent,
+//   DrawerCloseButton,
+//   IconButton,
+//   VStack,
+// } from "@chakra-ui/react";
+// import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
+// import { Link } from "react-router-dom";
+// import RegisterForm from "./RegisterForm";
+// import "../../style.css";
+
+// export default function NavBar() {
+//   const { isOpen, onOpen, onClose } = useDisclosure();
+//   const {
+//     isOpen: isDrawerOpen,
+//     onOpen: onDrawerOpen,
+//     onClose: onDrawerClose,
+//   } = useDisclosure();
+
+//   return (
+//     <chakra.header
+//       id="header"
+//       ml={{ base: "10px", md: "50px", lg: "130px" }}
+//       mr={{ base: "10px", md: "50px", lg: "130px" }}
+//       fontSize={{ base: "10px", md: "13px" }}
+//     >
+//       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
+//         {/* Logo */}
+//         <Text mr={{ base: "auto", md: "273px" }}>
+//           <Link to="/">SSD</Link>
+//         </Text>
+
+//         {/* Desktop Nav Items */}
+//         <Flex
+//           as="nav"
+//           display={{ base: "none", md: "flex" }}
+//           gap="240px"
+//           alignItems={"center"}
+//         >
+//           <Flex gap="2" mr="auto" alignItems={"center"}>
+//             <Box p="8px">
+//               <Link to="/">
+//                 <a>Home</a>
+//               </Link>
+//             </Box>
+//             <Box p="8px">
+//               <Menu>
+//                 <MenuButton
+//                   as={Button}
+//                   rightIcon={<ChevronDownIcon />}
+//                   bg="none"
+//                   fontSize={"13px"}
+//                 >
+//                   <a>Courses</a>
+//                 </MenuButton>
+//                 <MenuList>
+//                   <MenuItem>
+//                     <Link to="/uidesigncourse">UI Design</Link>
+//                   </MenuItem>
+//                   <MenuItem>
+//                     <Link to="/uxdesigncourse">UX Design</Link>
+//                   </MenuItem>
+//                   <MenuItem>
+//                     <Link to="/uxresearch">UX Research</Link>
+//                   </MenuItem>
+//                   <MenuItem>
+//                     <Link to="/idcourse">Interaction Design</Link>
+//                   </MenuItem>
+//                   <MenuItem>
+//                     <Link to="/dtcourse">Design Thinking</Link>
+//                   </MenuItem>
+//                   <MenuItem>
+//                     <Link to="/uiuxdesigncourse">UI/UX Design</Link>
+//                   </MenuItem>
+//                 </MenuList>
+//               </Menu>
+//             </Box>
+//             <Box p="8px">
+//               <Link to="/about">
+//                 <a>About Us</a>
+//               </Link>
+//             </Box>
+//             <Box p="8px">
+//               <Link to="/contact">
+//                 <a>Contact Us</a>
+//               </Link>
+//             </Box>
+//           </Flex>
+//           <Button bgColor={"#a020f0"} color={"white"} onClick={onOpen}>
+//             Register
+//           </Button>
+//         </Flex>
+
+//         {/* Mobile Menu Button */}
+//         <IconButton
+//           display={{ base: "flex", md: "none" }}
+//           icon={<HamburgerIcon />}
+//           onClick={onDrawerOpen}
+//           variant="outline"
+//           aria-label="Open Menu"
+//         />
+
+//         {/* Register Modal */}
+//         <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+//           <ModalOverlay />
+//           <ModalContent bgColor="#f2f2f2" w="1000px" p="30px">
+//             <ModalCloseButton />
+//             <ModalBody>
+//               <RegisterForm />
+//             </ModalBody>
+//           </ModalContent>
+//         </Modal>
+//       </Flex>
+
+//       {/* Mobile Drawer */}
+//       <Drawer isOpen={isDrawerOpen} placement="right" onClose={onDrawerClose}>
+//         <DrawerOverlay />
+//         <DrawerContent>
+//           <DrawerCloseButton />
+//           <DrawerBody>
+//             <VStack as="nav" spacing="4" alignItems={"start"}>
+//               <Box p="8px">
+//                 <Link to="/">Home</Link>
+//               </Box>
+//               <Box p="8px">
+//                 <Menu>
+//                   <MenuButton
+//                     as={Button}
+//                     rightIcon={<ChevronDownIcon />}
+//                     bg="none"
+//                     fontSize={"13px"}
+//                   >
+//                     Courses
+//                   </MenuButton>
+//                   <MenuList>
+//                     <MenuItem>
+//                       <Link to="/uidesigncourse">UI Design</Link>
+//                     </MenuItem>
+//                     <MenuItem>
+//                       <Link to="/uxdesigncourse">UX Design</Link>
+//                     </MenuItem>
+//                     <MenuItem>
+//                       <Link to="/uxresearch">UX Research</Link>
+//                     </MenuItem>
+//                     <MenuItem>
+//                       <Link to="/idcourse">Interaction Design</Link>
+//                     </MenuItem>
+//                     <MenuItem>
+//                       <Link to="/dtcourse">Design Thinking</Link>
+//                     </MenuItem>
+//                     <MenuItem>
+//                       <Link to="/uiuxdesigncourse">UI/UX Design</Link>
+//                     </MenuItem>
+//                   </MenuList>
+//                 </Menu>
+//               </Box>
+//               <Box p="8px">
+//                 <Link to="/about">About Us</Link>
+//               </Box>
+//               <Box p="8px">
+//                 <Link to="/contact">Contact Us</Link>
+//               </Box>
+//               <Button bgColor={"#a020f0"} color={"white"} onClick={onOpen}>
+//                 Register
+//               </Button>
+//             </VStack>
+//           </DrawerBody>
+//         </DrawerContent>
+//       </Drawer>
+//     </chakra.header>
+//   );
+// }
+
+import React from "react";
 import {
   Flex,
   Button,
@@ -23,8 +215,9 @@ import {
   VStack,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import RegisterForm from "./RegisterForm";
+import "../../style.css";
 
 export default function NavBar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -33,6 +226,23 @@ export default function NavBar() {
     onOpen: onDrawerOpen,
     onClose: onDrawerClose,
   } = useDisclosure();
+  const location = useLocation();
+
+  const linkStyle = {
+    px: 2,
+    py: 1,
+    color: "black",
+    _hover: { textDecoration: "none", color: "purple.600" },
+    borderBottom: "2px solid",
+    borderColor: "transparent",
+    transition: "color 0.3s ease, border-color 0.3s ease",
+  };
+
+  const activeLinkStyle = {
+    ...linkStyle,
+    color: "purple.600",
+    borderColor: "purple.600",
+  };
 
   return (
     <chakra.header
@@ -42,12 +252,15 @@ export default function NavBar() {
       fontSize={{ base: "10px", md: "13px" }}
     >
       <Flex w="100%" px="6" py="5" align="center" justify="space-between">
-        {/* Logo */}
         <Text mr={{ base: "auto", md: "273px" }}>
-          <Link to="/">SSD</Link>
+          <Link
+            to="/"
+            style={location.pathname === "/" ? activeLinkStyle : linkStyle}
+          >
+            SSD
+          </Link>
         </Text>
 
-        {/* Desktop Nav Items */}
         <Flex
           as="nav"
           display={{ base: "none", md: "flex" }}
@@ -56,7 +269,12 @@ export default function NavBar() {
         >
           <Flex gap="2" mr="auto" alignItems={"center"}>
             <Box p="8px">
-              <Link to="/">Home</Link>
+              <Link
+                to="/"
+                style={location.pathname === "/" ? activeLinkStyle : linkStyle}
+              >
+                Home
+              </Link>
             </Box>
             <Box p="8px">
               <Menu>
@@ -65,36 +283,105 @@ export default function NavBar() {
                   rightIcon={<ChevronDownIcon />}
                   bg="none"
                   fontSize={"13px"}
+                  _hover={{ color: "purple.600" }}
                 >
                   Courses
                 </MenuButton>
                 <MenuList>
                   <MenuItem>
-                    <Link to="/uidesigncourse">UI Design</Link>
+                    <Link
+                      to="/uidesigncourse"
+                      style={
+                        location.pathname === "/uidesigncourse"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      UI Design
+                    </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="/uxdesigncourse">UX Design</Link>
+                    <Link
+                      to="/uxdesigncourse"
+                      style={
+                        location.pathname === "/uxdesigncourse"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      UX Design
+                    </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="/uxresearch">UX Research</Link>
+                    <Link
+                      to="/uxresearch"
+                      style={
+                        location.pathname === "/uxresearch"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      UX Research
+                    </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="/idcourse">Interaction Design</Link>
+                    <Link
+                      to="/idcourse"
+                      style={
+                        location.pathname === "/idcourse"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      Interaction Design
+                    </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="/dtcourse">Design Thinking</Link>
+                    <Link
+                      to="/dtcourse"
+                      style={
+                        location.pathname === "/dtcourse"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      Design Thinking
+                    </Link>
                   </MenuItem>
                   <MenuItem>
-                    <Link to="/uiuxdesigncourse">UI/UX Design</Link>
+                    <Link
+                      to="/uiuxdesigncourse"
+                      style={
+                        location.pathname === "/uiuxdesigncourse"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      UI/UX Design
+                    </Link>
                   </MenuItem>
                 </MenuList>
               </Menu>
             </Box>
             <Box p="8px">
-              <Link to="/about">About Us</Link>
+              <Link
+                to="/about"
+                style={
+                  location.pathname === "/about" ? activeLinkStyle : linkStyle
+                }
+              >
+                About Us
+              </Link>
             </Box>
             <Box p="8px">
-              <Link to="/contact">Contact Us</Link>
+              <Link
+                to="/contact"
+                style={
+                  location.pathname === "/contact" ? activeLinkStyle : linkStyle
+                }
+              >
+                Contact Us
+              </Link>
             </Box>
           </Flex>
           <Button bgColor={"#a020f0"} color={"white"} onClick={onOpen}>
@@ -102,7 +389,6 @@ export default function NavBar() {
           </Button>
         </Flex>
 
-        {/* Mobile Menu Button */}
         <IconButton
           display={{ base: "flex", md: "none" }}
           icon={<HamburgerIcon />}
@@ -111,7 +397,6 @@ export default function NavBar() {
           aria-label="Open Menu"
         />
 
-        {/* Register Modal */}
         <Modal isOpen={isOpen} onClose={onClose} size="2xl">
           <ModalOverlay />
           <ModalContent bgColor="#f2f2f2" w="1000px" p="30px">
@@ -123,7 +408,6 @@ export default function NavBar() {
         </Modal>
       </Flex>
 
-      {/* Mobile Drawer */}
       <Drawer isOpen={isDrawerOpen} placement="right" onClose={onDrawerClose}>
         <DrawerOverlay />
         <DrawerContent>
@@ -131,7 +415,14 @@ export default function NavBar() {
           <DrawerBody>
             <VStack as="nav" spacing="4" alignItems={"start"}>
               <Box p="8px">
-                <Link to="/">Home</Link>
+                <Link
+                  to="/"
+                  style={
+                    location.pathname === "/" ? activeLinkStyle : linkStyle
+                  }
+                >
+                  Home
+                </Link>
               </Box>
               <Box p="8px">
                 <Menu>
@@ -140,36 +431,107 @@ export default function NavBar() {
                     rightIcon={<ChevronDownIcon />}
                     bg="none"
                     fontSize={"13px"}
+                    _hover={{ color: "purple.600" }}
                   >
                     Courses
                   </MenuButton>
                   <MenuList>
                     <MenuItem>
-                      <Link to="/uidesigncourse">UI Design</Link>
+                      <Link
+                        to="/uidesigncourse"
+                        style={
+                          location.pathname === "/uidesigncourse"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        UI Design
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link to="/uxdesigncourse">UX Design</Link>
+                      <Link
+                        to="/uxdesigncourse"
+                        style={
+                          location.pathname === "/uxdesigncourse"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        UX Design
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link to="/uxresearch">UX Research</Link>
+                      <Link
+                        to="/uxresearch"
+                        style={
+                          location.pathname === "/uxresearch"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        UX Research
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link to="/idcourse">Interaction Design</Link>
+                      <Link
+                        to="/idcourse"
+                        style={
+                          location.pathname === "/idcourse"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        Interaction Design
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link to="/dtcourse">Design Thinking</Link>
+                      <Link
+                        to="/dtcourse"
+                        style={
+                          location.pathname === "/dtcourse"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        Design Thinking
+                      </Link>
                     </MenuItem>
                     <MenuItem>
-                      <Link to="/uiuxdesigncourse">UI/UX Design</Link>
+                      <Link
+                        to="/uiuxdesigncourse"
+                        style={
+                          location.pathname === "/uiuxdesigncourse"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        UI/UX Design
+                      </Link>
                     </MenuItem>
                   </MenuList>
                 </Menu>
               </Box>
               <Box p="8px">
-                <Link to="/about">About Us</Link>
+                <Link
+                  to="/about"
+                  style={
+                    location.pathname === "/about" ? activeLinkStyle : linkStyle
+                  }
+                >
+                  About Us
+                </Link>
               </Box>
               <Box p="8px">
-                <Link to="/contact">Contact Us</Link>
+                <Link
+                  to="/contact"
+                  style={
+                    location.pathname === "/contact"
+                      ? activeLinkStyle
+                      : linkStyle
+                  }
+                >
+                  Contact Us
+                </Link>
               </Box>
               <Button bgColor={"#a020f0"} color={"white"} onClick={onOpen}>
                 Register

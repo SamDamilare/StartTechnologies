@@ -11,6 +11,7 @@ import {
 } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import RegisterForm from "../NewTabs/RegisterForm";
+import "../../style.css";
 
 const RegisterButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -31,6 +32,7 @@ const RegisterButton = () => {
           display="flex"
           alignItems="center"
           justifyContent="center"
+          id="register"
         >
           Register
         </Box>

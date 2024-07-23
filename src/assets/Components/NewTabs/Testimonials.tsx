@@ -56,8 +56,8 @@ const Testimonials = () => {
         autoPlaySpeed={3000}
         infinite={true}
         showDots={true}
-        centerMode={true}
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        // centerMode={true}
+        // removeArrowOnDeviceType={["tablet", "mobile"]}
       >
         {testimonyCards().map((item, idx) => (
           <Box
