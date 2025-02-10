@@ -8,6 +8,8 @@ import UIUXDesignCourse from "./Pages/CoursesPages/UIUXDesignCourse";
 import UIDesignCourse from "./Pages/CoursesPages/UIDesignCourse";
 import IDCourse from "./Pages/CoursesPages/IDCourse";
 import DTCourse from "./Pages/CoursesPages/DTCourse";
+import ProductDesign from "./Pages/CoursesPages/ProductDesign";
+import FrontendDev from "./Pages/CoursesPages/FrontendDev";
 
 export default [
   {
@@ -55,6 +57,16 @@ export default [
     path: "/uxresearch",
     element: <UXResearch />,
     name: "UXResearch",
+  },
+  {
+    path: "/productdesign",
+    element: <ProductDesign />,
+    name: "ProductDesign",
+  },
+  {
+    path: "/frontenddev",
+    element: <FrontendDev />,
+    name: "FrontendDev",
   },
 
   {

@@ -1,6 +1,7 @@
 import {
   Box,
   SimpleGrid,
+  Image,
   Heading,
   VStack,
   Link,
@@ -14,7 +15,7 @@ import { footerLinks } from "../../utilities/data";
 const Footer = () => {
   return (
     <Box
-      px={["24px", "24px", "100px"]}
+      px={["24px", "24px"]}
       py={"32px"}
       bgColor={"#440467"}
       color={"white"}
@@ -31,13 +32,16 @@ const Footer = () => {
           flexDirection={"column"}
           justifyContent={"space-between"}
         >
-          <Text>SSD</Text>
+          <Image
+            src="https://res.cloudinary.com/dktrwqio1/image/upload/v1729856923/NYRadio/startechlogo1_ez98hx.png"
+            w="60px"
+          />
           <Text
-            fontSize={"xs"}
-            mt={{ base: "none", md: "none", lg: "155px" }}
+            fontSize={"8px"}
+            mt={{ base: "none", md: "none", lg: "125px" }}
             w={{ base: "200px", md: "200px", lg: "100%" }}
           >
-            © 2024 Star School of Design. All rights reserved
+            © 2024 Velarix Solutions. All rights reserved
           </Text>
         </GridItem>
         <GridItem colSpan={[3, 3, 3, 2]}>
@@ -54,8 +58,14 @@ const Footer = () => {
                 </Heading>
                 <VStack alignItems={"start"} spacing={"14px"} fontSize={"14px"}>
                   {item.links.map((link, idx) => (
-                    <Link key={idx} as={ReactLink} to={link.link}>
-                      {link.name}
+                    <Link
+                      key={idx}
+                      as={ReactLink}
+                      to={link.link}
+                      target="_blank"
+                      color={"white"}
+                    >
+                      <Text color="white">{link.name}</Text>
                     </Link>
                   ))}
                 </VStack>

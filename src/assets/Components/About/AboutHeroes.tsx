@@ -17,7 +17,7 @@ const AboutHeroes = () => {
               fontWeight={600}
               color="#50585f"
             >
-              We are the <span style={{ color: "#a020ef" }}>Star </span>of
+              We are
               <span
                 style={{
                   background:
@@ -27,19 +27,19 @@ const AboutHeroes = () => {
                 }}
               >
                 {" "}
-                Design
+                Velarix
               </span>
             </Text>
           </Box>
-          <Box w={{ base: "300px", md: "600px", lg: "800px" }}>
+          <Box w={{ base: "300px", md: "600px", lg: "700px" }}>
             <Text
               fontSize={{ base: "xs", md: "sm", lg: "md" }}
               textAlign={{ base: "start", md: "start", lg: "center" }}
             >
-              There has never been a better time in history to build digital
-              products! We help our students advance their careers in Product
-              Management and we partner with Fortune 500 companies to upskill
-              their product teams.
+              Now is the perfect time to build amazing digital products! At
+              Velarix, we're dedicated to advancing careers in product
+              development through expert-led training, while partnering with
+              companies to elevate their product teams to new heights..
             </Text>
           </Box>
 

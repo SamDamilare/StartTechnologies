@@ -1,12 +1,7 @@
 // import React from "react";
-import {
-  Heading,
-  Text,
-  Box,
-  Image,
-  SimpleGrid,
-  GridItem,
-} from "@chakra-ui/react";
+import { Text, Box, Image, SimpleGrid, GridItem, Flex } from "@chakra-ui/react";
+
+import RegisterNowButton from "../../NewTabs/RegisterNowButton";
 
 const UXResearchEnroll = () => {
   return (
@@ -25,19 +20,30 @@ const UXResearchEnroll = () => {
             <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719762375/SSD/Frame_58_oydvxg.png" />
           </GridItem>
           <GridItem>
-            <Heading>Enroll with us Today</Heading>
-            <Text fontSize={"sm"}>
-              You can enroll in a Star School of Design course anytime online.
-              If you have questions about the course curriculum, or financing
-              and scholarship opportunities, our team is here to help.
-              <br /> <br />
-              Complete a quick enrollment by confirming when and where you'd
-              like to learn and selecting your payment options.
-              <br /> <br />
-              Congratulations! SSD will provide you with everything you need to
-              know in advance of your course kick-off so you’re prepared and
-              ready to thrive.
+            <Text fontWeight={700}>Enroll with us Today</Text>
+            <Text mt="10px">
+              Ready to dive into Frontend Development? Enrolling is simple:
             </Text>
+            <Box width={"80%"}>
+              <Flex alignItems={"center"} gap="15px" mt="10px">
+                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978775/SSD/3d-cube-scan_totpjy.svg" />
+                <Text fontSize={"sm"}>Pick Your Course</Text>
+              </Flex>
+              <Flex alignItems={"center"} gap="15px" mt="10px">
+                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978755/SSD/3dcube_azc3er.svg" />
+                <Text fontSize={"sm"}>
+                  We’ll prep you with everything you need to succeed.
+                </Text>
+              </Flex>
+              <Flex alignItems={"center"} gap="15px" mt="10px">
+                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978753/SSD/3d-square_zgn00y.svg" />
+                <Text fontSize={"sm"}>Pick Your Course</Text>
+              </Flex>
+            </Box>
+            <Text mt="10px">
+              Access exclusive opportunities to gain real-world experience.
+            </Text>
+            <RegisterNowButton />
           </GridItem>
         </SimpleGrid>
       </Box>

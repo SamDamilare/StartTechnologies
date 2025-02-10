@@ -1,51 +1,70 @@
 export const coursesDetails = () => [
-  {
-    image:
-      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853394/SSD/Rectangle_2_aontev.png",
-    header: "User Interface Design",
-    text: "Build your understanding of UI design basics by familiarizing yourself with common elements, best practices, trends, and features used by UI Designers today.",
-    button: "Learn More",
-    link: "/uidesigncourse",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853391/SSD/Rectangle_2_1_ambcge.png",
-    header: "User Experience Design",
-    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-    button: "Learn More",
-    link: "/uxdesigncourse",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853388/SSD/Rectangle_2_2_systff.png",
-    header: "UI/UX Designs",
-    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-    button: "Learn More",
-    link: "/uiuxdesigncourse",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-    header: "Interaction Design",
-    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
-    button: "Learn More",
-    Link: "/idcourse",
-  },
-  {
-    image:
-      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
-    header: "Design Thinking",
-    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy",
-    button: "Learn More",
-    link: "/dtcourse",
-  },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853394/SSD/Rectangle_2_aontev.png",
+  //   header: "User Interface Design",
+  //   text: "Build your understanding of UI design basics by familiarizing yourself with common elements, best practices, trends, and features used by UI Designers today.",
+  //   button: "Learn More",
+  //   link: "/uidesigncourse",
+  // },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853391/SSD/Rectangle_2_1_ambcge.png",
+  //   header: "User Experience Design",
+  //   text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+  //   button: "Learn More",
+  //   link: "/uxdesigncourse",
+  // },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853388/SSD/Rectangle_2_2_systff.png",
+  //   header: "UI/UX Designs",
+  //   text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+  //   button: "Learn More",
+  //   link: "/uiuxdesigncourse",
+  // },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
+  //   header: "Interaction Design",
+  //   text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+  //   button: "Learn More",
+  //   Link: "/idcourse",
+  // },
+  // {
+  //   image:
+  //     "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
+  //   header: "Design Thinking",
+  //   text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy",
+  //   button: "Learn More",
+  //   link: "/dtcourse",
+  // },
   {
     image:
       "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853386/SSD/Rectangle_2_3_kwmtl9.png",
     header: "UX Research",
-    text: "Our UX design courses begin with an introduction to user experience design that covers foundational web design concepts and the importance of UX research and strategy.",
+    text: "Expand your understanding of UX research by learning about research methodologies, best practices, emerging trends, and tools used by UX Researchers today.",
+    price: "N 70,000",
     button: "Learn More",
     link: "/uxresearch",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853394/SSD/Rectangle_2_aontev.png",
+    header: "Product Design",
+    text: "Learn to shape digital experiences that users love, with hands-on projects that teach you design thinking, research, and the creative process behind successful products.",
+    price: "N 100,000",
+    button: "Learn More",
+    link: "/productdesign",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/dktrwqio1/image/upload/v1717853388/SSD/Rectangle_2_2_systff.png",
+    header: "Frontend Development",
+    text: "Learn step-by-step how to build modern websites and applications, with hands-on projects that turn programming concepts into practical skills you'll use every day.",
+    price: "N 100,000",
+    button: "Learn More",
+    link: "/frontenddev",
   },
 ];
 
@@ -103,7 +122,7 @@ export const footerLinks = [
     links: [
       {
         name: "About",
-        link: "",
+        link: "/about",
       },
       {
         name: "Press",
@@ -115,7 +134,7 @@ export const footerLinks = [
       },
       {
         name: "Contact",
-        link: "",
+        link: "/contact",
       },
       {
         name: "Partners",
@@ -153,11 +172,11 @@ export const footerLinks = [
     links: [
       {
         name: "Facebook",
-        link: "",
+        link: "https://www.facebook.com/profile.php?id=61572822182662",
       },
       {
         name: "Twitter",
-        link: "",
+        link: "https://x.com/VelarixSolution",
       },
       {
         name: "Dribble",
@@ -165,11 +184,11 @@ export const footerLinks = [
       },
       {
         name: "Instagram",
-        link: "",
+        link: "https://www.instagram.com/velarixsolutions/",
       },
       {
         name: "Linkedin",
-        link: "",
+        link: "https://www.linkedin.com/company/velarixsolutions/",
       },
     ],
   },

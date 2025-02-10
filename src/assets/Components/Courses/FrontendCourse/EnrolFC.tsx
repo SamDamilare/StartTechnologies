@@ -1,8 +1,8 @@
-// import React from "react";
-import { Flex, Text, Box, Image, SimpleGrid, GridItem } from "@chakra-ui/react";
+import { Text, Box, Image, SimpleGrid, GridItem, Flex } from "@chakra-ui/react";
+
 import RegisterNowButton from "../../NewTabs/RegisterNowButton";
 
-const UXResearchGain = () => {
+const EnrolFC = () => {
   return (
     <div>
       <Box
@@ -13,12 +13,15 @@ const UXResearchGain = () => {
         <SimpleGrid
           columns={{ base: 1, md: 1, lg: 2 }}
           gap={{ base: "40px", md: "40px", lg: "70px" }}
-          alignItems={"start"}
+          alignItems={"end"}
         >
           <GridItem>
-            <Text fontWeight={700}>What will you gain?</Text>
+            <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719762375/SSD/Frame_58_oydvxg.png" />
+          </GridItem>
+          <GridItem>
+            <Text fontWeight={700}>Enroll with us Today</Text>
             <Text mt="10px">
-              By enrolling in Velarix’s UX Research course, you’ll:{" "}
+              Ready to dive into Frontend Development? Enrolling is simple:
             </Text>
             <Box width={"80%"}>
               <Flex alignItems={"center"} gap="15px" mt="10px">
@@ -26,7 +29,7 @@ const UXResearchGain = () => {
                 <Text fontSize={"sm"}>Pick Your Course</Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
-                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738984268/SSD/3d-rotate_grfuoe.svg" />
+                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978755/SSD/3dcube_azc3er.svg" />
                 <Text fontSize={"sm"}>
                   We’ll prep you with everything you need to succeed.
                 </Text>
@@ -35,24 +38,11 @@ const UXResearchGain = () => {
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978753/SSD/3d-square_zgn00y.svg" />
                 <Text fontSize={"sm"}>Pick Your Course</Text>
               </Flex>
-              <Flex alignItems={"center"} gap="15px" mt="10px">
-                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978755/SSD/3dcube_azc3er.svg" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
-              </Flex>
-              <Flex alignItems={"center"} gap="15px" mt="10px">
-                <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1739184191/SSD/3square_sekegz.png" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
-              </Flex>
-              <Text mt="10px">
-                At Velarix, we empower you to dream big and design a brighter
-                future. Join us and start your Product design journey today!
-              </Text>
             </Box>
-
+            <Text mt="10px">
+              Access exclusive opportunities to gain real-world experience.
+            </Text>
             <RegisterNowButton />
-          </GridItem>
-          <GridItem>
-            <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719762486/SSD/Frame_59_oepa5t.png" />
           </GridItem>
         </SimpleGrid>
       </Box>
@@ -60,4 +50,4 @@ const UXResearchGain = () => {
   );
 };
 
-export default UXResearchGain;
+export default EnrolFC;

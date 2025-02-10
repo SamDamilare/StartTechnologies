@@ -5,6 +5,7 @@ import AboutWhoWeAre from "../assets/Components/About/AboutWhoWeAre";
 import AboutMission from "../assets/Components/About/AboutMission";
 import Footer from "../assets/Components/NewTabs/Footer";
 import Testimonials from "../assets/Components/NewTabs/Testimonials";
+import WhatsApp from "../assets/Components/NewTabs/WhatsApp";
 
 const About = () => {
   return (
@@ -14,7 +15,7 @@ const About = () => {
       <AboutWhoWeAre />
       <AboutMission />
       <Testimonials />
-
+      <WhatsApp />
       <Footer />
     </div>
   );

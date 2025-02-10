@@ -196,6 +196,7 @@ import {
   Box,
   Text,
   Menu,
+  Image,
   MenuButton,
   MenuList,
   MenuItem,
@@ -256,7 +257,10 @@ export default function NavBar() {
             to="/"
             style={location.pathname === "/" ? activeLinkStyle : linkStyle}
           >
-            SSD
+            <Image
+              src="https://res.cloudinary.com/dktrwqio1/image/upload/v1729855347/NYRadio/Colored_Logo__2_-removebg-preview_tppkrv.png"
+              w="60px"
+            />
           </Link>
         </Text>
 
@@ -281,36 +285,20 @@ export default function NavBar() {
                   as={Button}
                   rightIcon={<ChevronDownIcon />}
                   bg="none"
+                  // className="no-animation"
+                  fontWeight={400}
                   fontSize={"13px"}
-                  _hover={{ color: "purple.600" }}
+                  _active={{
+                    transform: "none",
+                    bg: "transparent",
+                    // motion: "none",
+                  }}
+                  _hover={{ bg: "transparent" }}
+                  transition="none"
                 >
                   Courses
                 </MenuButton>
                 <MenuList>
-                  <MenuItem>
-                    <Link
-                      to="/uidesigncourse"
-                      style={
-                        location.pathname === "/uidesigncourse"
-                          ? activeLinkStyle
-                          : linkStyle
-                      }
-                    >
-                      UI Design
-                    </Link>
-                  </MenuItem>
-                  <MenuItem>
-                    <Link
-                      to="/uxdesigncourse"
-                      style={
-                        location.pathname === "/uxdesigncourse"
-                          ? activeLinkStyle
-                          : linkStyle
-                      }
-                    >
-                      UX Design
-                    </Link>
-                  </MenuItem>
                   <MenuItem>
                     <Link
                       to="/uxresearch"
@@ -325,12 +313,61 @@ export default function NavBar() {
                   </MenuItem>
                   <MenuItem>
                     <Link
-                      to="/idcourse"
+                      to="/productDesign"
                       style={
-                        location.pathname === "/idcourse"
+                        location.pathname === "/productDesign"
                           ? activeLinkStyle
                           : linkStyle
                       }
+                    >
+                      Product Design
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link
+                      to="/frontendDev"
+                      style={
+                        location.pathname === "/frontendDev"
+                          ? activeLinkStyle
+                          : linkStyle
+                      }
+                    >
+                      Frontend Development
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link
+                      to="/uidesigncourse"
+                      style={{
+                        pointerEvents: "none", // Disables clicks
+                        color: "gray", // Makes it look disabled
+                        opacity: 0.6, // Reduces visibility
+                      }}
+                    >
+                      UI Design
+                    </Link>
+                  </MenuItem>
+                  <MenuItem>
+                    <Link
+                      to="/uxdesigncourse"
+                      style={{
+                        pointerEvents: "none", // Disables clicks
+                        color: "gray", // Makes it look disabled
+                        opacity: 0.6, // Reduces visibility
+                      }}
+                    >
+                      UX Design
+                    </Link>
+                  </MenuItem>
+
+                  <MenuItem>
+                    <Link
+                      to="/idcourse"
+                      style={{
+                        pointerEvents: "none", // Disables clicks
+                        color: "gray", // Makes it look disabled
+                        opacity: 0.6, // Reduces visibility
+                      }}
                     >
                       Interaction Design
                     </Link>
@@ -338,11 +375,11 @@ export default function NavBar() {
                   <MenuItem>
                     <Link
                       to="/dtcourse"
-                      style={
-                        location.pathname === "/dtcourse"
-                          ? activeLinkStyle
-                          : linkStyle
-                      }
+                      style={{
+                        pointerEvents: "none", // Disables clicks
+                        color: "gray", // Makes it look disabled
+                        opacity: 0.6, // Reduces visibility
+                      }}
                     >
                       Design Thinking
                     </Link>
@@ -350,11 +387,11 @@ export default function NavBar() {
                   <MenuItem>
                     <Link
                       to="/uiuxdesigncourse"
-                      style={
-                        location.pathname === "/uiuxdesigncourse"
-                          ? activeLinkStyle
-                          : linkStyle
-                      }
+                      style={{
+                        pointerEvents: "none", // Disables clicks
+                        color: "gray", // Makes it look disabled
+                        opacity: 0.6, // Reduces visibility
+                      }}
                     >
                       UI/UX Design
                     </Link>
@@ -383,7 +420,12 @@ export default function NavBar() {
               </Link>
             </Box>
           </Flex>
-          <Button bgColor={"#a020f0"} color={"white"} onClick={onOpen}>
+          <Button
+            bgColor={"#a020f0"}
+            color={"white"}
+            onClick={onOpen}
+            className="no-animation"
+          >
             Register
           </Button>
         </Flex>
@@ -437,30 +479,6 @@ export default function NavBar() {
                   <MenuList>
                     <MenuItem>
                       <Link
-                        to="/uidesigncourse"
-                        style={
-                          location.pathname === "/uidesigncourse"
-                            ? activeLinkStyle
-                            : linkStyle
-                        }
-                      >
-                        UI Design
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link
-                        to="/uxdesigncourse"
-                        style={
-                          location.pathname === "/uxdesigncourse"
-                            ? activeLinkStyle
-                            : linkStyle
-                        }
-                      >
-                        UX Design
-                      </Link>
-                    </MenuItem>
-                    <MenuItem>
-                      <Link
                         to="/uxresearch"
                         style={
                           location.pathname === "/uxresearch"
@@ -473,12 +491,61 @@ export default function NavBar() {
                     </MenuItem>
                     <MenuItem>
                       <Link
-                        to="/idcourse"
+                        to="/productDesign"
                         style={
-                          location.pathname === "/idcourse"
+                          location.pathname === "/productDesign"
                             ? activeLinkStyle
                             : linkStyle
                         }
+                      >
+                        Product Design
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link
+                        to="/frontendDev"
+                        style={
+                          location.pathname === "/frontendDev"
+                            ? activeLinkStyle
+                            : linkStyle
+                        }
+                      >
+                        Frontend Development
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link
+                        to="/uidesigncourse"
+                        style={{
+                          pointerEvents: "none", // Disables clicks
+                          color: "gray", // Makes it look disabled
+                          opacity: 0.6, // Reduces visibility
+                        }}
+                      >
+                        UI Design
+                      </Link>
+                    </MenuItem>
+                    <MenuItem>
+                      <Link
+                        to="/uxdesigncourse"
+                        style={{
+                          pointerEvents: "none", // Disables clicks
+                          color: "gray", // Makes it look disabled
+                          opacity: 0.6, // Reduces visibility
+                        }}
+                      >
+                        UX Design
+                      </Link>
+                    </MenuItem>
+
+                    <MenuItem>
+                      <Link
+                        to="/idcourse"
+                        style={{
+                          pointerEvents: "none", // Disables clicks
+                          color: "gray", // Makes it look disabled
+                          opacity: 0.6, // Reduces visibility
+                        }}
                       >
                         Interaction Design
                       </Link>
@@ -486,11 +553,11 @@ export default function NavBar() {
                     <MenuItem>
                       <Link
                         to="/dtcourse"
-                        style={
-                          location.pathname === "/dtcourse"
-                            ? activeLinkStyle
-                            : linkStyle
-                        }
+                        style={{
+                          pointerEvents: "none", // Disables clicks
+                          color: "gray", // Makes it look disabled
+                          opacity: 0.6, // Reduces visibility
+                        }}
                       >
                         Design Thinking
                       </Link>
@@ -498,11 +565,11 @@ export default function NavBar() {
                     <MenuItem>
                       <Link
                         to="/uiuxdesigncourse"
-                        style={
-                          location.pathname === "/uiuxdesigncourse"
-                            ? activeLinkStyle
-                            : linkStyle
-                        }
+                        style={{
+                          pointerEvents: "none", // Disables clicks
+                          color: "gray", // Makes it look disabled
+                          opacity: 0.6, // Reduces visibility
+                        }}
                       >
                         UI/UX Design
                       </Link>

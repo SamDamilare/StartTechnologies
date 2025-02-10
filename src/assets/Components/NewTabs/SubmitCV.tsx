@@ -40,6 +40,12 @@ const RegisterForm = () => {
                 Job Role
               </FormLabel>
               <Select>
+                <option value="">UI Designer</option>
+                <option value="">UX Designer</option>
+                <option value="">Interaction Designer</option>
+                <option value="">Graphics Designer</option>
+                <option value="">Digital Marketing</option>
+                <option value="">Frontend Developer</option>
                 <option value="">Select</option>
               </Select>
               <FormLabel mt={2} mb={0}>
@@ -49,7 +55,7 @@ const RegisterForm = () => {
                 <option value="">select</option>
               </Select>
               <FormLabel mt={2} mb={0}>
-                Certificate ID?
+                Certificate ID? (optional)
               </FormLabel>
               <Input type="text" placeholder="text" />
               <FormLabel mt={2} mb={0}>

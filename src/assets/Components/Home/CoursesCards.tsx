@@ -11,9 +11,10 @@ import {
   CardBody,
   SimpleGrid,
   GridItem,
+  Link,
   Center,
 } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { coursesDetails } from "../../utilities/data";
 
 const CoursesCards = () => {
@@ -43,8 +44,11 @@ const CoursesCards = () => {
                     <Stack spacing="3">
                       <Heading size="md">{item.header}</Heading>
                       <Text fontSize={"sm"}>{item.text}</Text>
+                      <Text textAlign={"right"} fontWeight={700}>
+                        {item.price}
+                      </Text>
                     </Stack>
-                    <Link to="{item.link}">
+                    <Link href={item.link}>
                       <Button
                         variant="solid"
                         colorScheme="none"

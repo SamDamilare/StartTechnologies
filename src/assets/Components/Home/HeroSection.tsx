@@ -29,19 +29,17 @@ const HeroSection = () => {
               fontWeight={600}
               color="#a020f0"
             >
-              Accelerate{" "}
-              <span style={{ color: "#50585f" }}>Your Career in </span>
-              UI/UX Design
+              Build <span style={{ color: "#50585f" }}>Your Career at </span>
+              VELARIX
             </Text>
           </Box>
-          <Box w={{ base: "300px", md: "800px", lg: "952px" }}>
+          <Box w={{ base: "300px", md: "700px", lg: "700px" }}>
             <Text
               fontSize={{ base: "sm", md: "md", lg: "20px" }}
               textAlign={"center"}
             >
-              Level-up your design skills and accelerate your design career by
-              learning how to build stunning visual interfaces and interactive
-              prototypes using cutting-edge tool
+              Fast-track your path to leadership with hands-on tech skills
+              training designed to accelerate your career growth in record time.
             </Text>
           </Box>
 

@@ -1,4 +1,3 @@
-// import React from "react";
 import {
   Heading,
   VStack,
@@ -9,13 +8,13 @@ import {
   GridItem,
 } from "@chakra-ui/react";
 
-const IDCourseJourney = () => {
+const JourneyFC = () => {
   return (
     <div>
       <Box
-        ml={{ base: "20px", md: "30px", lg: "160px" }}
-        mr={{ base: "20px", md: "30px", lg: "160px" }}
         mt="62px"
+        ml={{ base: "20px", md: "20px", lg: "160px" }}
+        mr={{ base: "20px", md: "20px", lg: "160px" }}
       >
         <SimpleGrid
           columns={{ base: 1, md: 1, lg: 2 }}
@@ -25,14 +24,14 @@ const IDCourseJourney = () => {
           <GridItem>
             <VStack alignItems={"start"}>
               <Heading fontSize={"2xl"}>
-                Why start your journey with us?
+                Why start your journey with Velarix?
               </Heading>
               <Text fontSize={"sm"} mt="10px">
-                Star School of Design's courses are the ultimate way to swiftly
-                acquire valuable new skills and elevate your career. Discover
-                more about these SSD courses and connect with a Learning Advisor
-                who can answer your questions and guide you on your journey to
-                success.
+                Velarix is your go-to tech academy for mastering in-demand
+                skills and launching a successful career in tech. Our Frontend
+                Development course is designed to help you gain practical,
+                job-ready skills in HTML, CSS, JavaScript, and modern frameworks
+                with just ₦ 100,000
               </Text>
               <Box
                 bgColor={"white"}
@@ -45,14 +44,14 @@ const IDCourseJourney = () => {
                 <VStack alignItems={"flex-start"}>
                   <Text>Kick off:</Text>
                   <Text fontWeight={700} fontSize={"3xl"}>
-                    6th January, 2025
+                    March, 2025
                   </Text>
                 </VStack>
               </Box>
             </VStack>
           </GridItem>
           <GridItem>
-            <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719744660/SSD/Frame_54_sstuql.png" />
+            <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719760180/SSD/Frame_45_dyqkuc.png" />
           </GridItem>
         </SimpleGrid>
       </Box>
@@ -60,4 +59,4 @@ const IDCourseJourney = () => {
   );
 };
 
-export default IDCourseJourney;
+export default JourneyFC;

@@ -7,6 +7,7 @@ import Events from "../assets/Components/Home/Events";
 import Footer from "../assets/Components/NewTabs/Footer";
 import Internships from "../assets/Components/Home/Internships";
 import Testimonials from "../assets/Components/NewTabs/Testimonials";
+import WhatsApp from "../assets/Components/NewTabs/WhatsApp";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <Internships />
       <Events />
       <Testimonials />
+      <WhatsApp />
       <Footer />
     </div>
   );

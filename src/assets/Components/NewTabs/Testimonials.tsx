@@ -55,7 +55,7 @@ const Testimonials = () => {
         autoPlay={false}
         autoPlaySpeed={3000}
         infinite={true}
-        showDots={true}
+        showDots={false}
         // centerMode={true}
         // removeArrowOnDeviceType={["tablet", "mobile"]}
       >

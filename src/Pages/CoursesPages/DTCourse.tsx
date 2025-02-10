@@ -15,7 +15,7 @@ const DTCourse = () => {
       <DTJourney />
       <DTEnroll />
       <DTGain />
-      <Syllabus />
+      <Syllabus imgUrl="https://res.cloudinary.com/dktrwqio1/image/upload/v1730470976/SSD/Design_Thinking_Course_1_sciu8z.png" />
       <Testimonials />
       <Footer />
     </div>

@@ -1,8 +1,7 @@
-// import React from "react";
 import { Flex, Text, Box, Image, SimpleGrid, GridItem } from "@chakra-ui/react";
 import RegisterNowButton from "../../NewTabs/RegisterNowButton";
 
-const UXResearchGain = () => {
+const GainPDC = () => {
   return (
     <div>
       <Box
@@ -60,4 +59,4 @@ const UXResearchGain = () => {
   );
 };
 
-export default UXResearchGain;
+export default GainPDC;

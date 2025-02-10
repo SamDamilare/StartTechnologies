@@ -24,11 +24,15 @@ const ContactForm = () => {
           boxShadow={"10px"}
         >
           <FormControl>
-            <FormLabel>Full name</FormLabel>
+            <FormLabel mb={0}>Full name</FormLabel>
             <Input placeholder="Full name" type="text" />
-            <FormLabel mt={2}>Email</FormLabel>
+            <FormLabel mb={0} mt={4}>
+              Email
+            </FormLabel>
             <Input placeholder="Email" type="text" />
-            <FormLabel mt={2}>Full name</FormLabel>
+            <FormLabel mb={0} mt={4}>
+              Message
+            </FormLabel>
             <Textarea placeholder="Type your message here..." />
             <Button bgColor="#a020f0" color="white" w="full" mt="20px">
               Submit

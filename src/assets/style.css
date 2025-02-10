@@ -19,3 +19,6 @@ button:hover {
   color: #a020ef;
   transform: translateY(-3px);
 }
+.no-animation {
+  transition: none !important;
+}

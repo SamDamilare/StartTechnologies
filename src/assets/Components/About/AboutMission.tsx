@@ -8,6 +8,7 @@ import {
   GridItem,
   Center,
 } from "@chakra-ui/react";
+import RegisterNowButton from "../NewTabs/RegisterNowButton";
 
 const AboutMission = () => {
   return (
@@ -29,22 +30,24 @@ const AboutMission = () => {
             </GridItem>
             <GridItem>
               <Heading>Mission</Heading>
-              <Text fontSize={"sm"}>
-                At Star School of Design, our mission is to illuminate the path
-                to creativity and innovation. Our dedicated team of design
-                experts collaborates to create programs that meet the diverse
-                needs of our students and inspire organizational transformation.
-                Our platform boasts a rich variety of online courses, resources,
-                and tools, all meticulously crafted to help you acquire new
-                skills, elevate your career, and follow your passion. <br />
-                <br />
-                We believe that high-quality design education should be
-                accessible to all. This unwavering commitment drives us to offer
-                flexible and affordable programs, ensuring that everyone,
-                regardless of their background, can access the knowledge and
-                resources they need to thrive. At SSD, we empower you to dream
-                big and design a brighter future.
+              <Text fontSize={"sm"} mt="20px">
+                At Velarix, we believe quality tech education should be
+                accessible to everyone. Our expert-led programs combine
+                innovation with flexibility, empowering you to acquire new
+                skills and advance your career—regardless of your background.
+                Join us to transform your future.
               </Text>
+              {/* <Button
+                mt="20px"
+                px="30px"
+                variant="outline"
+                color="#a020f0"
+                fontWeight={300}
+                border="1px"
+              >
+                Register now
+              </Button> */}
+              <RegisterNowButton />
             </GridItem>
           </SimpleGrid>
         </Box>

@@ -47,7 +47,7 @@ const ReuseHeroes = () => {
                 py="12px"
                 borderRadius={"5px"}
               >
-                4 Months
+                6 Weeks
               </Box>
             </GridItem>
             <GridItem>

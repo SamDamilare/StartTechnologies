@@ -8,6 +8,7 @@ import {
   GridItem,
   Center,
 } from "@chakra-ui/react";
+import RegisterNowButton from "../NewTabs/RegisterNowButton";
 
 const AboutWhoWeAre = () => {
   return (
@@ -25,21 +26,26 @@ const AboutWhoWeAre = () => {
             gap={{ base: "40px", md: "40px", lg: "70px" }}
           >
             <GridItem textAlign={{ base: "start", md: "start", lg: "start" }}>
-              <Heading>Who we are</Heading>
-              <Text fontSize={"sm"}>
-                At Star School of Design, our passionate team of designers and
-                educators work tirelessly to craft programs that ignite
-                creativity and transform careers. Our platform offers an
-                extensive array of online courses, resources, and tools designed
-                to inspire and empower you to unleash your full potential.
-                <br />
-                <br /> Our dedication to making top-tier design education
-                accessible to everyone is at the core of our mission. That’s why
-                we provide flexible and affordable programs, ensuring that
-                anyone, anywhere, can pursue their dreams and excel in the world
-                of design. Join us at SSD and embark on a journey to shape the
-                future of design.
+              <Heading>Who we are?</Heading>
+              <Text fontSize={"sm"} mt="20px">
+                At Velarix, our expert team crafts learning experiences that
+                ignite creativity and transform careers. We offer comprehensive
+                online courses and resources that make top-tier tech education
+                accessible and affordable for everyone. Join us to build the
+                future you envision.
               </Text>
+
+              {/* <Button
+                mt="20px"
+                px="30px"
+                variant="outline"
+                color="#a020f0"
+                fontWeight={300}
+                border="1px"
+              >
+                Register now
+              </Button> */}
+              <RegisterNowButton />
             </GridItem>
             <GridItem>
               <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1719653108/SSD/Frame_40_cour1a.png" />

@@ -16,7 +16,7 @@ const UIDesignCourse = () => {
       <UIDCourseJourney />
       <UIDCourseEnroll />
       <UIDCourseGain />
-      <Syllabus />
+      <Syllabus imgUrl="https://res.cloudinary.com/dktrwqio1/image/upload/v1730470979/SSD/UI_Design_Course_1_naqekc.png" />
       <Testimonials />
       <Footer />
     </div>

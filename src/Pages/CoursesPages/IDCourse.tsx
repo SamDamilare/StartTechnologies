@@ -16,7 +16,7 @@ const IDCourse = () => {
       <IDCourseJourney />
       <IDCourseEnroll />
       <IDCourseGain />
-      <Syllabus />
+      <Syllabus imgUrl="https://res.cloudinary.com/dktrwqio1/image/upload/v1730470977/SSD/Interaction_Design_Course_1_pipkph.png" />
       <Testimonials />
       <Footer />
     </div>

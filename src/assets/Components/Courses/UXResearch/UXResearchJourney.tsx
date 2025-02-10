@@ -25,14 +25,13 @@ const UXResearchJourney = () => {
           <GridItem>
             <VStack alignItems={"start"}>
               <Heading fontSize={"2xl"}>
-                Why start your journey with us?
+                Why start your journey with Velarix?
               </Heading>
               <Text fontSize={"sm"} mt="10px">
-                Star School of Design's courses are the ultimate way to swiftly
-                acquire valuable new skills and elevate your career. Discover
-                more about these SSD courses and connect with a Learning Advisor
-                who can answer your questions and guide you on your journey to
-                success.
+                Velarix turns learners into leaders. Master in-demand tech
+                skills, earn certifications, and land internships—all with
+                hands-on training and expert guidance. Your future in tech
+                starts here.
               </Text>
               <Box
                 bgColor={"white"}
@@ -45,7 +44,7 @@ const UXResearchJourney = () => {
                 <VStack alignItems={"flex-start"}>
                   <Text>Kick off:</Text>
                   <Text fontWeight={700} fontSize={"3xl"}>
-                    1st August, 2024
+                    March, 2025
                   </Text>
                 </VStack>
               </Box>

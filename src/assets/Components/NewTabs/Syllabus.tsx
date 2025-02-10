@@ -5,9 +5,19 @@ import {
   Image,
   SimpleGrid,
   Text,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalBody,
+  ModalCloseButton,
+  Center,
+  useDisclosure,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
-const Syllabus = () => {
+const Syllabus = ({ imgUrl }: { imgUrl: string }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const modalSize = useBreakpointValue({ base: "full", md: "lg", lg: "2xl" });
   return (
     <div>
       <Box
@@ -41,7 +51,13 @@ const Syllabus = () => {
                   You are interested in joining our classes and you need to know
                   our syllabus and time table. See our Syllabus{" "}
                 </Text>
-                <Button mt="20px" bgColor={"#a020f0"} color={"white"}>
+
+                <Button
+                  mt="20px"
+                  bgColor={"#a020f0"}
+                  color={"white"}
+                  onClick={onOpen}
+                >
                   See our syllabus
                 </Button>
               </Box>
@@ -49,6 +65,25 @@ const Syllabus = () => {
           </SimpleGrid>
         </Box>
       </Box>
+      <Center>
+        <Modal isOpen={isOpen} onClose={onClose} size={modalSize}>
+          <ModalOverlay />
+          <ModalContent
+            bgColor={{ base: "transparent", lg: "#transparent" }}
+            mt="0"
+          >
+            <ModalCloseButton />
+            <ModalBody>
+              <img
+                src={imgUrl}
+                alt=""
+                width="65%"
+                style={{ marginTop: "0", marginLeft: "20%" }}
+              />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      </Center>
     </div>
   );
 };
