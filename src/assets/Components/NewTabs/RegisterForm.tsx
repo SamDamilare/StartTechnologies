@@ -8,9 +8,49 @@ import {
   Select,
   Text,
   VStack,
+  useToast,
 } from "@chakra-ui/react";
+import { useState } from "react";
 
 const RegisterForm = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [selectedOption, setSelectedOption] = useState("");
+  const [amount, setAmount] = useState("");
+
+  const toast = useToast();
+
+  const handleOptionChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
+    const value = event.target.value;
+    setSelectedOption(value);
+
+    const priceMap: Record<string, string> = {
+      "UX Research": "N 70,000",
+      "Frontend Development": "N 100,000",
+      "Product Design": "N 100,000",
+    };
+    setAmount(priceMap[value] || "");
+  };
+  const handleSubmit = () => {
+    if (!fullName || !email || !selectedOption) {
+      toast({
+        title: "Error",
+        description: "Please fill in all required fields.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Registration Successful",
+        description: "You have successfully registered!",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
+  };
+
   return (
     <div>
       <Center>
@@ -40,22 +80,46 @@ const RegisterForm = () => {
           >
             <FormControl>
               <FormLabel mb={0}>Full Name</FormLabel>
-              <Input type="text" placeholder="Full Name" />
+              <Input
+                type="text"
+                placeholder="Full Name"
+                onChange={(e) => setFullName(e.target.value)}
+              />
               <FormLabel mt={4} mb={0}>
                 Email
               </FormLabel>
-              <Input type="email" placeholder="example@email.com" />
+              <Input
+                type="email"
+                placeholder="example@email.com"
+                onChange={(e) => setEmail(e.target.value)}
+              />
               <FormLabel mt={4} mb={0}>
                 Course of interest
               </FormLabel>
-              <Select>
+              <Select value={selectedOption} onChange={handleOptionChange}>
                 <option value="">Select</option>
-                <option value="">UI Design</option>
-                <option value="">UX Design</option>
-                <option value="">UI/UX Design</option>
-                <option value="">UX Research</option>
-                <option value="">Design Thinking</option>
-                <option value="">Interaction Design</option>
+                <option value="UX Research">UX Research</option>
+                <option value="Product Design">Product Design</option>
+                <option value="Frontend Development">
+                  Frontend Development
+                </option>
+
+                <option value="" disabled>
+                  UI Design
+                </option>
+                <option value="" disabled>
+                  UX Design
+                </option>
+                <option value="" disabled>
+                  UI/UX Design
+                </option>
+
+                <option value="" disabled>
+                  Design Thinking
+                </option>
+                <option value="" disabled>
+                  Interaction Design
+                </option>
               </Select>
               <FormLabel mt={4} mb={0}>
                 Style of learning
@@ -71,16 +135,22 @@ const RegisterForm = () => {
               <FormLabel mt={4} mb={0}>
                 Price
               </FormLabel>
-              <Input type="text" placeholder="Select" />
-              {/* <FormLabel mt={4} mb={0}>
-                Learning Mode
-              </FormLabel>
-              <Select>
-                <option>Select</option>
-              </Select> */}
+
+              <Input
+                type="text"
+                placeholder="Select A Course"
+                value={amount}
+                isReadOnly
+              />
             </FormControl>
 
-            <Button w="full" mt={4} bgColor={"#a020f0"} color={"white"}>
+            <Button
+              w="full"
+              mt={4}
+              bgColor={"#a020f0"}
+              color={"white"}
+              onClick={handleSubmit}
+            >
               Submit
             </Button>
           </Box>

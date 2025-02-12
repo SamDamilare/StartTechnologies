@@ -5,7 +5,7 @@ const WhatsApp = () => {
   return (
     <div>
       <Link
-        href="https://wa.me/message/ODSUXNCSXVTDM1" // Replace with your number
+        href="https://wa.me/message/ODSUXNCSXVTDM1"
         isExternal
         position="fixed"
         bottom="20px"

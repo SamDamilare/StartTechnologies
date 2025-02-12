@@ -179,8 +179,8 @@ export const footerLinks = [
         link: "https://x.com/VelarixSolution",
       },
       {
-        name: "Dribble",
-        link: "",
+        name: "WhatsApp",
+        link: "https://wa.me/message/ODSUXNCSXVTDM1",
       },
       {
         name: "Instagram",
@@ -197,7 +197,7 @@ export const footerLinks = [
 export const testimonyCards = () => [
   {
     header: "Best Class ever",
-    text: "Star knows how to simplify her classes and make it as interesting as possible and I am . happy to have been trained by her.",
+    text: "I enjoyed Valerix online class, in spite of my busy schedule, their flexibility made me a great designer today. It was worth it!",
     image:
       "https://res.cloudinary.com/dktrwqio1/image/upload/v1719679550/SSD/Profile_ku7edb.png",
     name: "Stephen Alade",
@@ -205,7 +205,7 @@ export const testimonyCards = () => [
   },
   {
     header: "Simplicity with Fun",
-    text: "The facilitator knows how to make a virtual class feel like a physical class and it is always fun learning things as she is very empathetic",
+    text: "The facilitators knows how to make a virtual class feel like a physical class and it is always fun learning things.",
     image:
       "https://res.cloudinary.com/dktrwqio1/image/upload/v1719679546/SSD/Profile_1_ut9emj.png",
     name: "Adebanjo Victor",
