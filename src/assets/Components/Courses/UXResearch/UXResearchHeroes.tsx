@@ -22,7 +22,7 @@ const UXResearchHeroes = () => {
             </Text>
           </Box>
 
-          <ReuseHeroes />
+          <ReuseHeroes content="Uncover User Research methodologies and Design Smarter, User-Centered Solutions" />
           <Image
             w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="40px"

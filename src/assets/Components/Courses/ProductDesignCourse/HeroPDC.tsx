@@ -20,7 +20,7 @@ const HeroPDC = () => {
               <span style={{ color: "#a020f0" }}>Product</span> Design Course
             </Text>
           </Box>
-          <ReuseHeroes />
+          <ReuseHeroes content="Design Stunning, User-Centered Apps and Websites That Stand Out." />
           <Image
             w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="40px"

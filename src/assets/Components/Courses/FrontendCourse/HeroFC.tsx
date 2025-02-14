@@ -20,7 +20,7 @@ const HeroFC = () => {
               <span style={{ color: "#a020f0" }}>Frontend</span> Development
             </Text>
           </Box>
-          <ReuseHeroes />
+          <ReuseHeroes content="Build Dynamic, User-Friendly Websites and Apps—Learn Frontend Development from Scratch to Advanced." />
           <Image
             w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="40px"

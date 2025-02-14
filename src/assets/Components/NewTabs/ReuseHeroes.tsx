@@ -2,17 +2,22 @@ import { Box, VStack, Text, GridItem, SimpleGrid } from "@chakra-ui/react";
 
 import RegisterButton from "./RegisterButton";
 
-const ReuseHeroes = () => {
+interface ReuseHeroesProps {
+  content: string;
+  fontSize?: string;
+  color?: string;
+}
+
+const ReuseHeroes: React.FC<ReuseHeroesProps> = ({ content }) => {
   return (
     <div>
       <VStack>
-        <Box w={{ base: "300px", md: "800px", lg: "952px" }}>
+        <Box w={{ base: "300px", md: "600px", lg: "700px" }}>
           <Text
-            fontSize={{ base: "xs", md: "sm", lg: "20px" }}
+            fontSize={{ base: "xs", md: "sm", lg: "16px" }}
             textAlign={"center"}
           >
-            Design High-Impact User Experiences. Research, design, and prototype
-            effective, visually-driven websites and apps.
+            {content}
           </Text>
         </Box>
 

@@ -72,17 +72,17 @@ export const eventCards = () => [
   {
     icon: "https://res.cloudinary.com/dktrwqio1/image/upload/v1718094698/SSD/routing_vkazaa.svg",
     head: "Quaterly Review",
-    text: "Our webinar is designed to provide valuable insights, best practices, and the latest trends in product design to help you stay at the forefront of this dynamic and rapidly evolving industry.",
+    text: "Our quarterly review is designed to provide valuable insights, best practices, and the latest trends in our projects to help you stay informed and engaged with our progress and goals.",
   },
   {
     icon: "https://res.cloudinary.com/dktrwqio1/image/upload/v1718094698/SSD/routing_vkazaa.svg",
     head: "AMA Session",
-    text: "Join us for our Monthly AMA Sessions, where you have the unique opportunity to engage with seasoned  professionals, industry leaders, and accomplished entrepreneurs.",
+    text: "Our AMA sessions are designed to provide valuable insights, best practices, and the latest trends by connecting you with industry experts to answer your most pressing questions.",
   },
   {
     icon: "https://res.cloudinary.com/dktrwqio1/image/upload/v1718094698/SSD/routing_vkazaa.svg",
-    head: "Online Design Meetings",
-    text: "Join us for our Monthly OD meetings, where you have insights into designs and how you can achieve some great design technique.",
+    head: "Online Meetings",
+    text: "Our online design meetings are designed to provide valuable insights, best practices, and the latest trends in Products to help you stay connected and productive in a virtual environment.",
   },
   {
     icon: "https://res.cloudinary.com/dktrwqio1/image/upload/v1718094698/SSD/routing_vkazaa.svg",
@@ -217,6 +217,6 @@ export const testimonyCards = () => [
     image:
       "https://res.cloudinary.com/dktrwqio1/image/upload/v1719679539/SSD/Profile_2_xbu9im.png",
     name: "Sarah Jolayemi",
-    position: "UI/UX Designer",
+    position: "Frontend Developer",
   },
 ];

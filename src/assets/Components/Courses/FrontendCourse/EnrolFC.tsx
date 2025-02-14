@@ -26,17 +26,25 @@ const EnrolFC = () => {
             <Box width={"80%"}>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978775/SSD/3d-cube-scan_totpjy.svg" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
+                <Text fontSize={"sm"}>
+                  Pick the program that fits your goals.
+                </Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978755/SSD/3dcube_azc3er.svg" />
                 <Text fontSize={"sm"}>
-                  We’ll prep you with everything you need to succeed.
+                  Connect with a Velarix Learning Advisor to discuss course
+                  details, financing, or scholarships.
                 </Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978753/SSD/3d-square_zgn00y.svg" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
+                <Text fontSize={"sm"}>
+                  Once enrolled, Gain practical, job-ready skills in{" "}
+                  <span style={{ fontStyle: "italic" }}>
+                    HTML, CSS, JavaScript, and modern frameworks.
+                  </span>
+                </Text>
               </Flex>
             </Box>
             <Text mt="10px">

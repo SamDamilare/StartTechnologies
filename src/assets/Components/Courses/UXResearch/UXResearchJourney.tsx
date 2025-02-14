@@ -28,10 +28,11 @@ const UXResearchJourney = () => {
                 Why start your journey with Velarix?
               </Heading>
               <Text fontSize={"sm"} mt="10px">
-                Velarix turns learners into leaders. Master in-demand tech
-                skills, earn certifications, and land internships—all with
-                hands-on training and expert guidance. Your future in tech
-                starts here.
+                Master UX Research and launch a career in user-centered design.
+                Our course helps you gain practical skills in user research,
+                usability testing, and data analysis, earn industry-recognized
+                certifications to stand out to employers and access real-world
+                projects and internship opportunities with just ₦ 70,000
               </Text>
               <Box
                 bgColor={"white"}

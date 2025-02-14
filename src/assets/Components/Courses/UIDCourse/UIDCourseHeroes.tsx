@@ -22,7 +22,7 @@ const UIDCourseHeroes = () => {
               Course
             </Text>
           </Box>
-          <ReuseHeroes />
+          <ReuseHeroes content="" />
           <Image
             w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="40px"

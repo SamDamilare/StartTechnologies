@@ -68,7 +68,11 @@ export default [
     element: <FrontendDev />,
     name: "FrontendDev",
   },
-
+  // {
+  //   path: "/frontenddev",
+  //   element: <FrontendDev />,
+  //   name: "FrontendDev",
+  // },
   {
     path: "*",
     element: <Navigate to={"/"} replace />,

@@ -12,7 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 
-const RegisterForm = () => {
+const RegisterForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [selectedOption, setSelectedOption] = useState("");
@@ -31,6 +31,8 @@ const RegisterForm = () => {
     };
     setAmount(priceMap[value] || "");
   };
+  onSuccess();
+
   const handleSubmit = () => {
     if (!fullName || !email || !selectedOption) {
       toast({
@@ -48,6 +50,7 @@ const RegisterForm = () => {
         duration: 3000,
         isClosable: true,
       });
+      // onSuccess(); // ✅ Trigger the modal change
     }
   };
 

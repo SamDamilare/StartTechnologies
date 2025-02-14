@@ -23,29 +23,39 @@ const UXResearchGain = () => {
             <Box width={"80%"}>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978775/SSD/3d-cube-scan_totpjy.svg" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
+                <Text fontSize={"sm"}>
+                  Learn user research methods, usability testing, and
+                  data-driven decision-making.
+                </Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738984268/SSD/3d-rotate_grfuoe.svg" />
                 <Text fontSize={"sm"}>
-                  We’ll prep you with everything you need to succeed.
+                  Work on real-world projects to showcase your expertise.
                 </Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978753/SSD/3d-square_zgn00y.svg" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
+                <Text fontSize={"sm"}>
+                  Get guidance from industry pros who’ve been there.
+                </Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1738978755/SSD/3dcube_azc3er.svg" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
+                <Text fontSize={"sm"}>
+                  Connect with peers, mentors, and professionals.
+                </Text>
               </Flex>
               <Flex alignItems={"center"} gap="15px" mt="10px">
                 <Image src="https://res.cloudinary.com/dktrwqio1/image/upload/v1739184191/SSD/3square_sekegz.png" />
-                <Text fontSize={"sm"}>Pick Your Course</Text>
+                <Text fontSize={"sm"}>
+                  Gain the skills and confidence to land your dream job in UX
+                  Research.
+                </Text>
               </Flex>
               <Text mt="10px">
-                At Velarix, we empower you to dream big and design a brighter
-                future. Join us and start your Product design journey today!
+                Velarix doesn’t just teach research—we help you shape the future
+                of user experiences.
               </Text>
             </Box>
 

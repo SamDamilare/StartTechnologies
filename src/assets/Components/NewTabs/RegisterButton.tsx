@@ -9,14 +9,21 @@ import {
   useBreakpointValue,
   Center,
 } from "@chakra-ui/react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import RegisterForm from "../NewTabs/RegisterForm";
 import "../../style.css";
+import PayDetails from "./PayDetails";
 
 const RegisterButton = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showPayDetails, setShowPayDetails] = useState(false);
   const modalSize = useBreakpointValue({ base: "full", md: "lg", lg: "2xl" });
 
+  const handleShowPayDetails = () => {
+    console.log("myname", showPayDetails);
+    setShowPayDetails(true);
+  };
   return (
     <div>
       <Link to="" onClick={onOpen}>
@@ -43,11 +50,16 @@ const RegisterButton = () => {
           <ModalContent bgColor={{ base: "transparent", lg: "#f2f2f2" }}>
             <ModalCloseButton />
             <ModalBody>
-              <RegisterForm />
+              {!showPayDetails ? (
+                <RegisterForm onSuccess={handleShowPayDetails} />
+              ) : (
+                <PayDetails />
+              )}
             </ModalBody>
           </ModalContent>
         </Modal>
       </Center>
+      {/* PayDetails Modal */}
     </div>
   );
 };
