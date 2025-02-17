@@ -81,46 +81,11 @@
 
 // export default ContactForm;
 
-import {
-  Textarea,
-  FormLabel,
-  FormControl,
-  Button,
-  Box,
-  Input,
-  Center,
-} from "@chakra-ui/react";
-import { useRef } from "react";
-import emailjs from "@emailjs/browser";
+import { Button, Box, Center } from "@chakra-ui/react";
+
 import { Link } from "react-router-dom";
 
 const ContactForm = () => {
-  // Define the ref with the correct HTMLFormElement type
-  const form = useRef<HTMLFormElement>(null);
-
-  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    console.log("myname");
-
-    if (form.current) {
-      emailjs
-        .sendForm(
-          "service_t2up4bn",
-          "template_3kxk84n",
-          form.current,
-          "rXBav9lDoqc7wwcwm" // Public key as a string
-        )
-        .then(
-          () => {
-            console.log("SUCCESS!");
-          },
-          (error) => {
-            console.log("FAILED...", error.text);
-          }
-        );
-    }
-  };
-
   return (
     <Center>
       <Box
