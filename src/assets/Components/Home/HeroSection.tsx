@@ -15,9 +15,17 @@ import {
 import { Link } from "react-router-dom";
 import RegisterForm from "../NewTabs/RegisterForm";
 import "../../style.css";
+import { useState } from "react";
+import RegisterButton from "../NewTabs/RegisterButton";
 
 const HeroSection = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const [showPayDetails, setShowPayDetails] = useState(false);
+
+  const handleShowPayDetails = () => {
+    setShowPayDetails(true);
+    console.log("Current showPayDetails:", showPayDetails);
+  };
   return (
     <div>
       <Center>
@@ -42,8 +50,9 @@ const HeroSection = () => {
               training designed to accelerate your career growth in record time.
             </Text>
           </Box>
+          <RegisterButton />
 
-          <Link to="">
+          {/* <Link to="">
             <Box
               mt="40px"
               bgColor={"#a020f0"}
@@ -59,7 +68,7 @@ const HeroSection = () => {
             >
               Register
             </Box>
-          </Link>
+          </Link> */}
           <Image
             w={{ base: "300px", md: "600px", lg: "952px" }}
             mt="20px"
@@ -78,7 +87,7 @@ const HeroSection = () => {
             </ModalHeader> */}
           <ModalCloseButton />
           <ModalBody>
-            <RegisterForm />
+            <RegisterForm onSuccess={handleShowPayDetails} />
           </ModalBody>
         </ModalContent>
       </Modal>

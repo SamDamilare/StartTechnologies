@@ -134,7 +134,7 @@ export const footerLinks = [
       },
       {
         name: "Contact",
-        link: "/contact",
+        link: "https://form.jotform.com/250465358135559",
       },
       {
         name: "Partners",

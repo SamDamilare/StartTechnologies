@@ -11,6 +11,8 @@ import {
   useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
+// import RegisterButton from "./RegisterButton";
+// import PayDetails from "./PayDetails";
 
 const RegisterForm = ({ onSuccess }: { onSuccess: () => void }) => {
   const [fullName, setFullName] = useState("");
@@ -31,8 +33,6 @@ const RegisterForm = ({ onSuccess }: { onSuccess: () => void }) => {
     };
     setAmount(priceMap[value] || "");
   };
-  onSuccess();
-
   const handleSubmit = () => {
     if (!fullName || !email || !selectedOption) {
       toast({
@@ -49,8 +49,9 @@ const RegisterForm = ({ onSuccess }: { onSuccess: () => void }) => {
         status: "success",
         duration: 3000,
         isClosable: true,
-      });
-      // onSuccess(); // ✅ Trigger the modal change
+      }),
+        onSuccess();
+      // (<PayDetails />);
     }
   };
 
