@@ -835,7 +835,7 @@ export default function NavBar() {
               </Link>
             </Box>
           </Flex>
-          <Link to="https://form.jotform.com/250465914886570">
+          <Link to="https://form.jotform.com/250465914886570" target="_blank">
             <Button
               bgColor={"#a020f0"}
               color={"white"}
@@ -995,10 +995,10 @@ export default function NavBar() {
               </Box>
               <Box p="8px">
                 <Link
-                  to="/contact"
+                  to="https://form.jotform.com/250465358135559"
+                  target="_blank"
                   style={
-                    location.pathname ===
-                    "https://form.jotform.com/250465358135559"
+                    location.pathname === "/contact"
                       ? activeLinkStyle
                       : linkStyle
                   }
@@ -1006,7 +1006,10 @@ export default function NavBar() {
                   Contact Us
                 </Link>
               </Box>
-              <Link to="https://form.jotform.com/250465914886570">
+              <Link
+                to="https://form.jotform.com/250465914886570"
+                target="_blank"
+              >
                 <Button bgColor={"#a020f0"} color={"white"}>
                   Register
                 </Button>
