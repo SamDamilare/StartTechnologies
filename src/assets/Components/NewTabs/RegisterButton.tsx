@@ -66,56 +66,31 @@
 
 // export default RegisterButton;
 
-import {
-  Box,
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalBody,
-  useDisclosure,
-  useBreakpointValue,
-  Center,
-} from "@chakra-ui/react";
+import { Box, Center } from "@chakra-ui/react";
 import "../../style.css";
-import PayDetails from "./PayDetails";
+import { Link } from "react-router-dom";
 
 const RegisterButton = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const modalSize = useBreakpointValue({ base: "full", md: "lg", lg: "2xl" });
-
   return (
     <div>
-      <Box
-        mt="40px"
-        bgColor={"#a020f0"}
-        color={"white"}
-        width={{ base: "120px", md: "150px" }}
-        borderRadius={"5px"}
-        alignContent={"center"}
-        height={"50px"}
-        textAlign={"center"}
-        display="flex"
-        alignItems="center"
-        justifyContent="center"
-        id="register"
-        onClick={onOpen}
-      >
-        Register
-      </Box>
-
-      <Center>
-        <Modal isOpen={isOpen} onClose={onClose} size={modalSize}>
-          <ModalOverlay />
-          <ModalContent bgColor={{ base: "transparent", lg: "#f2f2f2" }}>
-            <ModalCloseButton />
-            <ModalBody>
-              <PayDetails />
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      </Center>
+      <Link to="https://form.jotform.com/250465914886570" target="_blank">
+        <Box
+          mt="40px"
+          bgColor={"#a020f0"}
+          color={"white"}
+          width={{ base: "120px", md: "150px" }}
+          borderRadius={"5px"}
+          alignContent={"center"}
+          height={"50px"}
+          textAlign={"center"}
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          id="register"
+        >
+          Register
+        </Box>
+      </Link>
     </div>
   );
 };

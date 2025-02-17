@@ -135,7 +135,10 @@ const VirtualClasses = () => {
               w={{ base: "300px", md: "350px", lg: "400px" }}
               mt="40px"
             >
-              <Link to="https://form.jotform.com/250465817739569">
+              <Link
+                to="https://form.jotform.com/250465817739569"
+                target="_blank"
+              >
                 <Button
                   w={{ base: "full", md: "full", lg: "150px" }}
                   bgColor={"#a020ef"}
@@ -146,7 +149,10 @@ const VirtualClasses = () => {
                   Submit CV
                 </Button>
               </Link>
-              <Link to="https://form.jotform.com/250465358135559">
+              <Link
+                to="https://form.jotform.com/250465358135559"
+                target="_blank"
+              >
                 <Button
                   bgColor={"transparent"}
                   colorScheme="#a020ef"

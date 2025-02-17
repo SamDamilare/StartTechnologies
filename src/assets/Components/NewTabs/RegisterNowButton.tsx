@@ -69,49 +69,24 @@
 
 // export default RegisterNowButton;
 
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalCloseButton,
-  ModalBody,
-  useDisclosure,
-  useBreakpointValue,
-  Center,
-  Button,
-} from "@chakra-ui/react";
-// import { Link } from "react-router-dom";
-import PayDetails from "./PayDetails";
+import { Button } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
 const RegisterNowButton = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const modalSize = useBreakpointValue({ base: "full", md: "lg", lg: "2xl" });
-
   return (
     <>
-      <Button
-        mt="20px"
-        px="30px"
-        variant="outline"
-        color="#a020f0"
-        fontWeight={300}
-        border="1px"
-        onClick={onOpen}
-      >
-        Register now
-      </Button>
-      <Center>
-        <Modal isOpen={isOpen} onClose={onClose} size={modalSize}>
-          <ModalOverlay />
-          <ModalContent bgColor={{ base: "transparent", lg: "#f2f2f2" }}>
-            <ModalCloseButton />
-            <ModalBody>
-              <PayDetails />
-            </ModalBody>
-          </ModalContent>
-        </Modal>
-      </Center>
+      <Link to="https://form.jotform.com/250465914886570" target="_blank">
+        <Button
+          mt="20px"
+          px="30px"
+          variant="outline"
+          color="#a020f0"
+          fontWeight={300}
+          border="1px"
+        >
+          Register now
+        </Button>
+      </Link>
     </>
   );
 };
