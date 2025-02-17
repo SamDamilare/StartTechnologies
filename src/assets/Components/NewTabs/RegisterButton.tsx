@@ -66,7 +66,7 @@
 
 // export default RegisterButton;
 
-import { Box, Center } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import "../../style.css";
 import { Link } from "react-router-dom";
 
