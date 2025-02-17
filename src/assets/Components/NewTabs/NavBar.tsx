@@ -827,6 +827,7 @@ export default function NavBar() {
             <Box p="8px">
               <Link
                 to="https://form.jotform.com/250465358135559"
+                target="_blank"
                 style={
                   location.pathname === "/contact" ? activeLinkStyle : linkStyle
                 }
