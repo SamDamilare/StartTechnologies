@@ -1,5 +1,6 @@
 {
   "name": "esstar",
+  "homepage": "https://velarix.com.ng/",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,14 +17,20 @@
     "@emailjs/browser": "^4.4.1",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
+    "@hookform/resolvers": "^5.0.1",
+    "@supabase/supabase-js": "^2.49.4",
     "emailjs": "^4.0.3",
     "flowbite-react": "^0.10.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-ga": "^3.3.1",
+    "react-ga4": "^2.1.0",
+    "react-hook-form": "^7.55.0",
     "react-multi-carousel": "^2.8.5",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.23.1",
-    "react-slick": "^0.30.2"
+    "react-slick": "^0.30.2",
+    "zod": "^3.24.2"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
