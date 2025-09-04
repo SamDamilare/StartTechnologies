@@ -134,7 +134,7 @@ export const footerLinks = [
       },
       {
         name: "Contact",
-        link: "https://form.jotform.com/250465358135559",
+        link: "/contact",
       },
       {
         name: "Partners",
@@ -151,7 +151,7 @@ export const footerLinks = [
       },
       {
         name: "Terms of Service",
-        link: "",
+        link: "/TermsCond",
       },
       {
         name: "Legal",
@@ -159,11 +159,11 @@ export const footerLinks = [
       },
       {
         name: "Privacy Policy",
-        link: "",
+        link: "/VelarixPrivacy",
       },
       {
         name: "Cookies",
-        link: "",
+        link: "/CookiesPolicy",
       },
     ],
   },

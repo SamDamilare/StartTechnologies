@@ -629,13 +629,20 @@ import {
   DrawerCloseButton,
   IconButton,
   VStack,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
 } from "@chakra-ui/react";
 import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import { Link, useLocation } from "react-router-dom";
+import RegisterForm from "./RegisterForm";
 
 import "../../style.css";
 
 export default function NavBar() {
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const {
     isOpen: isDrawerOpen,
     onOpen: onDrawerOpen,
@@ -826,7 +833,7 @@ export default function NavBar() {
             </Box>
             <Box p="8px">
               <Link
-                to="https://form.jotform.com/250465358135559"
+                to="/contact"
                 target="_blank"
                 style={
                   location.pathname === "/contact" ? activeLinkStyle : linkStyle
@@ -836,15 +843,16 @@ export default function NavBar() {
               </Link>
             </Box>
           </Flex>
-          <Link to="https://form.jotform.com/250465914886570" target="_blank">
-            <Button
-              bgColor={"#a020f0"}
-              color={"white"}
-              className="no-animation"
-            >
-              Register
-            </Button>
-          </Link>
+
+          <Button
+            bgColor={"#a020f0"}
+            color={"white"}
+            onClick={onOpen}
+            className="no-animation"
+            _hover={{ bg: "purple.900", color: "white" }}
+          >
+            Register
+          </Button>
         </Flex>
 
         <IconButton
@@ -854,6 +862,17 @@ export default function NavBar() {
           variant="outline"
           aria-label="Open Menu"
         />
+        <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+          <ModalOverlay />
+
+          <ModalContent bgColor="#f2f2f2" w="1000px" p="30px">
+            <ModalCloseButton />
+
+            <ModalBody>
+              <RegisterForm />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
       </Flex>
 
       <Drawer isOpen={isDrawerOpen} placement="right" onClose={onDrawerClose}>
@@ -996,7 +1015,7 @@ export default function NavBar() {
               </Box>
               <Box p="8px">
                 <Link
-                  to="https://form.jotform.com/250465358135559"
+                  to="/contact"
                   target="_blank"
                   style={
                     location.pathname === "/contact"
@@ -1007,14 +1026,10 @@ export default function NavBar() {
                   Contact Us
                 </Link>
               </Box>
-              <Link
-                to="https://form.jotform.com/250465914886570"
-                target="_blank"
-              >
-                <Button bgColor={"#a020f0"} color={"white"}>
-                  Register
-                </Button>
-              </Link>
+
+              <Button bgColor={"#a020f0"} color={"white"} onClick={onOpen}>
+                Register
+              </Button>
             </VStack>
           </DrawerBody>
         </DrawerContent>

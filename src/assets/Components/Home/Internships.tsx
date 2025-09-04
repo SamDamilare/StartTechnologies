@@ -95,7 +95,6 @@
 // };
 
 // export default VirtualClasses;
-
 import {
   Box,
   VStack,
@@ -104,77 +103,117 @@ import {
   Center,
   SimpleGrid,
   Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
+  useDisclosure,
 } from "@chakra-ui/react";
+import SubmitCV from "../NewTabs/SubmitCV";
 import { Link } from "react-router-dom";
+import "../../style.css";
 
-const VirtualClasses = () => {
+const Internships = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   return (
-    <div>
-      <Box
-        mt="80px"
-        ml={{ base: "20px", md: "20px", lg: "160px" }}
-        mr={{ base: "20px", md: "20px", lg: "160px" }}
-      >
-        <VStack>
-          <Box w={{ base: "300px", md: "350px", lg: "400px" }}>
-            <Center>
-              <VStack textAlign={"center"} w={"80%"}>
-                <Text fontWeight={"600"}>Get Internship placements </Text>
-                <Text fontSize={"sm"}>
-                  We have a pool of ready projects ready to be live that you can
-                  get your hands on to add to your portfolio.
-                </Text>
-              </VStack>
-            </Center>
-          </Box>
+    <Box
+      mt="80px"
+      ml={{ base: "20px", md: "20px", lg: "160px" }}
+      mr={{ base: "20px", md: "20px", lg: "160px" }}
+    >
+      <VStack>
+        {/* Intro Text */}
+        <Box w={{ base: "300px", md: "350px", lg: "400px" }}>
+          <Center>
+            <VStack textAlign="center" w="80%">
+              <Text fontWeight="600">Get Internship Placements</Text>
+              <Text fontSize="sm">
+                We have a pool of live projects you can get your hands on to
+                boost your portfolio.
+              </Text>
+            </VStack>
+          </Center>
+        </Box>
 
-          <Box>
-            <SimpleGrid
-              columns={{ base: 1, md: 1, lg: 2 }}
-              gap={{ base: "20px", md: "20px", lg: "40px" }}
-              w={{ base: "300px", md: "350px", lg: "400px" }}
-              mt="40px"
+        {/* Buttons */}
+        <Box>
+          <SimpleGrid
+            columns={{ base: 1, md: 1, lg: 2 }}
+            gap={{ base: "20px", md: "20px", lg: "40px" }}
+            w={{ base: "300px", md: "350px", lg: "400px" }}
+            mt="40px"
+          >
+            {/* Open modal instead of linking away */}
+            {/* <Button
+              w={{ base: "full", md: "full", lg: "150px" }}
+              bgColor="#a020ef"
+              color="white"
+              id="register"
+              onClick={onOpen}
+              className="no-animation"
+              _hover={{ bg: "purple.900", color: "white" }}
             >
-              <Link
-                to="https://form.jotform.com/250465817739569"
-                target="_blank"
-              >
-                <Button
-                  w={{ base: "full", md: "full", lg: "150px" }}
-                  bgColor={"#a020ef"}
-                  color={"white"}
-                  id="register"
-                >
-                  {" "}
-                  Submit CV
-                </Button>
-              </Link>
-              <Link
-                to="https://form.jotform.com/250465358135559"
-                target="_blank"
-              >
-                <Button
-                  bgColor={"transparent"}
-                  colorScheme="#a020ef"
-                  variant="outline"
-                  color={"#a020ef"}
-                  w={{ base: "full", md: "full", lg: "150px" }}
-                >
-                  Contact Us
-                </Button>
-              </Link>
-            </SimpleGrid>
-          </Box>
+              Submit CV
+            </Button> */}
 
-          <Image
-            w={{ base: "300px", md: "600px", lg: "952px" }}
-            mt={{ base: "30px", md: "30px", lg: "64px" }}
-            src="https://res.cloudinary.com/dktrwqio1/image/upload/v1720144850/SSD/Rectangle_16_1_d0xram.png"
-          />
-        </VStack>
-      </Box>
-    </div>
+            <Button
+              w={{ base: "full", md: "full", lg: "150px" }}
+              bg="#a020ef" // base purple
+              color="white" // base text color
+              id="register"
+              onClick={onOpen}
+              transition="0s"
+              variant="unstyled"
+              _hover={{
+                bg: "purple.900", // Chakra's dark purple
+                // color: "white", // keep text white
+              }}
+            >
+              Submit CV
+            </Button>
+
+            {/* Contact Page */}
+            <Link to="/contact" target="_blank">
+              <Button
+                bgColor="transparent"
+                variant="outline"
+                color="#a020ef"
+                w={{ base: "full", md: "full", lg: "150px" }}
+              >
+                Contact Us
+              </Button>
+            </Link>
+          </SimpleGrid>
+        </Box>
+
+        {/* Image */}
+        <Image
+          w={{ base: "300px", md: "600px", lg: "952px" }}
+          mt={{ base: "30px", md: "30px", lg: "64px" }}
+          src="https://res.cloudinary.com/dktrwqio1/image/upload/v1720144850/SSD/Rectangle_16_1_d0xram.png"
+        />
+
+        {/* Modal */}
+        <Modal isOpen={isOpen} onClose={onClose} size="2xl">
+          <ModalOverlay />
+          <ModalContent bgColor="#f2f2f2" p="30px">
+            {/* <ModalHeader>
+              <Text fontSize="2xl" fontWeight={600}>
+                Submit Your CV
+              </Text>
+            </ModalHeader> */}
+            <ModalCloseButton />
+            <ModalBody>
+              {/* Your CV submission form/component */}
+              <SubmitCV />
+            </ModalBody>
+          </ModalContent>
+        </Modal>
+      </VStack>
+    </Box>
   );
 };
 
-export default VirtualClasses;
+export default Internships;

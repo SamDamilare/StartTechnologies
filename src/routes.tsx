@@ -10,6 +10,9 @@ import IDCourse from "./Pages/CoursesPages/IDCourse";
 import DTCourse from "./Pages/CoursesPages/DTCourse";
 import ProductDesign from "./Pages/CoursesPages/ProductDesign";
 import FrontendDev from "./Pages/CoursesPages/FrontendDev";
+import TermsCond from "./assets/Components/NewTabs/TermsCond";
+import VelarixPrivacy from "./assets/Components/NewTabs/VelarixPrivacy";
+import CookiesPolicy from "./assets/Components/NewTabs/CookiesPolicy";
 
 export default [
   {
@@ -68,11 +71,21 @@ export default [
     element: <FrontendDev />,
     name: "FrontendDev",
   },
-  // {
-  //   path: "/frontenddev",
-  //   element: <FrontendDev />,
-  //   name: "FrontendDev",
-  // },
+  {
+    path: "/TermsCond",
+    element: <TermsCond />,
+    name: "Terms & Conditions",
+  },
+  {
+    path: "/VelarixPrivacy",
+    element: <VelarixPrivacy />,
+    name: "VelarixPrivacy",
+  },
+  {
+    path: "/CookiesPolicy",
+    element: <CookiesPolicy />,
+    name: "CookiesPolicy",
+  },
   {
     path: "*",
     element: <Navigate to={"/"} replace />,

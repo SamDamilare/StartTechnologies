@@ -62,7 +62,7 @@ const Footer = () => {
                       key={idx}
                       as={ReactLink}
                       to={link.link}
-                      target="_blank"
+                      // target="_blank"
                       color={"white"}
                     >
                       <Text color="white">{link.name}</Text>

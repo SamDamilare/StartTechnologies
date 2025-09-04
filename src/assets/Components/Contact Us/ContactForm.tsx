@@ -209,7 +209,7 @@ const ContactForm = () => {
       setIsSubmitting(true);
 
       // Insert data into Supabase 'contacts' table
-      const { error } = await supabase.from("contacts").insert([
+      const { error } = await supabase.from("ContactFormTest").insert([
         {
           name: data.name,
           email: data.email,
