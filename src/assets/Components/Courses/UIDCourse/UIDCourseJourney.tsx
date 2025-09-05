@@ -44,7 +44,7 @@ const UIDCourseJourney = () => {
                 <VStack alignItems={"flex-start"}>
                   <Text>Kick off:</Text>
                   <Text fontWeight={700} fontSize={"3xl"}>
-                    6th January, 2025
+                    October, 2025
                   </Text>
                 </VStack>
               </Box>
