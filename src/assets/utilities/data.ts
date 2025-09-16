@@ -236,7 +236,7 @@ export const footerData = {
       title: "Home",
       links: [
         { label: "About Us", href: "/about" },
-        { label: "Frontend Development", href: "#" },
+        { label: "Frontend Development", href: "/frontenddev" },
         { label: "Product Design", href: "/productdesign" },
         { label: "UX Research", href: "/uxresearch" },
       ],
