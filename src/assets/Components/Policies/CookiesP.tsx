@@ -7,6 +7,7 @@ import {
   UnorderedList,
   Container,
 } from "@chakra-ui/react";
+import BTHomeButton from "../NewTabs/BTHomeButton";
 
 const CookiesP = () => {
   return (
@@ -160,6 +161,8 @@ const CookiesP = () => {
             </Text>
           </Box>
         </VStack>
+
+        <BTHomeButton />
       </Container>
     </Box>
   );

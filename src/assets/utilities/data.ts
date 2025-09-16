@@ -125,12 +125,12 @@ export const footerLinks = [
         link: "/about",
       },
       {
-        name: "Press",
+        name: "Carrers",
         link: "",
       },
       {
-        name: "Careers",
-        link: "",
+        name: "Refund Policy",
+        link: "/refundpolicy",
       },
       {
         name: "Contact",
@@ -151,7 +151,7 @@ export const footerLinks = [
       },
       {
         name: "Terms of Service",
-        link: "/TermsCond",
+        link: "/termscond",
       },
       {
         name: "Legal",
@@ -159,11 +159,11 @@ export const footerLinks = [
       },
       {
         name: "Privacy Policy",
-        link: "/VelarixPrivacy",
+        link: "/velarixprivacy",
       },
       {
         name: "Cookies",
-        link: "/CookiesPolicy",
+        link: "/cookiespolicy",
       },
     ],
   },
@@ -220,3 +220,74 @@ export const testimonyCards = () => [
     position: "Frontend Developer",
   },
 ];
+
+import { MdOutlineLocalPhone } from "react-icons/md";
+import { FiMail } from "react-icons/fi";
+import { GrLocation } from "react-icons/gr";
+
+export const footerData = {
+  company: {
+    name: "",
+    logo: "https://res.cloudinary.com/dktrwqio1/image/upload/v1729856923/NYRadio/startechlogo1_ez98hx.png",
+    copyright: "© 2025 Velarix Solutions. All rights reserved",
+  },
+  navigation: {
+    home: {
+      title: "Home",
+      links: [
+        { label: "Why Choose Us", href: "#" },
+        { label: "Courses", href: "#" },
+        { label: "About", href: "/about" },
+        { label: "Submit CV", href: "#" },
+      ],
+    },
+    policies: {
+      title: "Policies",
+      links: [
+        { label: "Terms of service", href: "/termscond" },
+        { label: "Refund Policy", href: "/refundpolicy" },
+        { label: "Privacy Policy", href: "/velarixprivacy" },
+        { label: "Cookies", href: "/cookiespolicy" },
+      ],
+    },
+  },
+  contact: {
+    title: "Contact",
+    details: [
+      {
+        icon: MdOutlineLocalPhone,
+        text: "08077736946",
+        href: "tel:08077736946",
+      },
+      {
+        icon: FiMail,
+        text: "info@velarix.com.ng",
+        href: "mailto:info@velarix.com.ng",
+      },
+      {
+        icon: GrLocation,
+        text: "22, Alh Mustapha Street, Ori-okuta, Ikorodu, Lagos State",
+        href: "#",
+      },
+    ],
+  },
+  social: {
+    title: "Follow us",
+    links: [
+      {
+        label: "Facebook",
+        href: "https://www.facebook.com/profile.php?id=61572822182662",
+      },
+      { label: "Twitter", href: "https://x.com/VelarixSolution" },
+      { label: "WhatsApp", href: "https://wa.me/message/ODSUXNCSXVTDM1" },
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/velarixsolutions/",
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/company/velarixsolutions/",
+      },
+    ],
+  },
+};

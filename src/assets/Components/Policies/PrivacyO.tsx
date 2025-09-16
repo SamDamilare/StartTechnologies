@@ -7,6 +7,7 @@ import {
   ListItem,
   Container,
 } from "@chakra-ui/react";
+import BTHomeButton from "../NewTabs/BTHomeButton";
 
 const PrivacyO = () => {
   return (
@@ -258,6 +259,7 @@ const PrivacyO = () => {
             </Text>
           </Box>
         </VStack>
+        <BTHomeButton />
       </Container>
     </Box>
   );

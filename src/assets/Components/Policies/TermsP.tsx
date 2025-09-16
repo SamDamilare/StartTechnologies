@@ -7,6 +7,7 @@ import {
   ListItem,
   Container,
 } from "@chakra-ui/react";
+import BTHomeButton from "../NewTabs/BTHomeButton";
 
 const TermsP = () => {
   return (
@@ -161,6 +162,7 @@ const TermsP = () => {
               </Text>
             </Box>
           </VStack>
+          <BTHomeButton />
         </Container>
       </Box>
     </div>

@@ -175,7 +175,7 @@ const Internships = () => {
             </Button>
 
             {/* Contact Page */}
-            <Link to="/contact" target="_blank">
+            <Link to="/contact">
               <Button
                 bgColor="transparent"
                 variant="outline"

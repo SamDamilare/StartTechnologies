@@ -13,6 +13,7 @@ import FrontendDev from "./Pages/CoursesPages/FrontendDev";
 import TermsCond from "./assets/Components/NewTabs/TermsCond";
 import VelarixPrivacy from "./assets/Components/NewTabs/VelarixPrivacy";
 import CookiesPolicy from "./assets/Components/NewTabs/CookiesPolicy";
+import RefundPolicy from "./assets/Components/NewTabs/RefundPolicy";
 
 export default [
   {
@@ -72,17 +73,22 @@ export default [
     name: "FrontendDev",
   },
   {
-    path: "/TermsCond",
+    path: "/termscond",
     element: <TermsCond />,
     name: "Terms & Conditions",
   },
   {
-    path: "/VelarixPrivacy",
+    path: "/velarixprivacy",
     element: <VelarixPrivacy />,
     name: "VelarixPrivacy",
   },
   {
-    path: "/CookiesPolicy",
+    path: "/refundpolicy",
+    element: <RefundPolicy />,
+    name: "RefundPolicy",
+  },
+  {
+    path: "/cookiespolicy",
     element: <CookiesPolicy />,
     name: "CookiesPolicy",
   },
