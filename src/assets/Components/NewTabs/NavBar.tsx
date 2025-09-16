@@ -1015,7 +1015,6 @@ export default function NavBar() {
               <Box p="8px">
                 <Link
                   to="/contact"
-                  target="_blank"
                   style={
                     location.pathname === "/contact"
                       ? activeLinkStyle

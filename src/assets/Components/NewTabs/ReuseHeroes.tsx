@@ -52,7 +52,7 @@ const ReuseHeroes: React.FC<ReuseHeroesProps> = ({ content }) => {
                 py="12px"
                 borderRadius={"5px"}
               >
-                6 Weeks
+                12 Weeks
               </Box>
             </GridItem>
             <GridItem>

@@ -10,7 +10,7 @@ import {
   Grid,
   GridItem,
 } from "@chakra-ui/react";
-
+import { Link as RouterLink } from "react-router-dom";
 import { footerData } from "../../utilities/data";
 
 const Footer = () => {
@@ -105,6 +105,7 @@ const Footer = () => {
                     <Icon as={detail.icon} mt={1} />
                     <Link
                       href={detail.href}
+                      target="_blank"
                       _hover={{ textDecoration: "underline" }}
                     >
                       <Text color="white">{detail.text}</Text>
@@ -121,9 +122,20 @@ const Footer = () => {
               </Text>
               <Stack spacing={2} fontSize="xs">
                 {footerData.social.links.map((link, index) => (
+                  // <Link
+                  //   key={index}
+                  //   href={link.href}
+                  //   _hover={{ textDecoration: "underline" }}
+                  // >
+                  //   <Text color="white">{link.label}</Text>
+                  // </Link>
+
                   <Link
                     key={index}
-                    href={link.href}
+                    as={RouterLink}
+                    to={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     _hover={{ textDecoration: "underline" }}
                   >
                     <Text color="white">{link.label}</Text>
