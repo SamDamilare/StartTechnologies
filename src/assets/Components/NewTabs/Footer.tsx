@@ -119,7 +119,7 @@ const Footer = () => {
               <Text fontSize="lg" fontWeight="semibold" mb={4}>
                 {footerData.social.title}
               </Text>
-              <Stack spacing={2} fontSize="sm">
+              <Stack spacing={2} fontSize="xs">
                 {footerData.social.links.map((link, index) => (
                   <Link
                     key={index}

@@ -235,10 +235,10 @@ export const footerData = {
     home: {
       title: "Home",
       links: [
-        { label: "Why Choose Us", href: "#" },
-        { label: "Courses", href: "#" },
-        { label: "About", href: "/about" },
-        { label: "Submit CV", href: "#" },
+        { label: "About Us", href: "/about" },
+        { label: "Frontend Development", href: "#" },
+        { label: "Product Design", href: "/productdesign" },
+        { label: "UX Research", href: "/uxresearch" },
       ],
     },
     policies: {
@@ -266,7 +266,7 @@ export const footerData = {
       },
       {
         icon: GrLocation,
-        text: "22, Alh Mustapha Street, Ori-okuta, Ikorodu, Lagos State",
+        text: "21, Alh Mustapha Street, Ori-okuta, Ikorodu, Lagos State",
         href: "#",
       },
     ],
