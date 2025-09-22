@@ -2148,6 +2148,338 @@
 
 // export default RegisterForm;
 
+// import { zodResolver } from "@hookform/resolvers/zod";
+// import { useForm } from "react-hook-form";
+// import { useEffect, useState } from "react";
+// import * as z from "zod";
+// import {
+//   Box,
+//   FormControl,
+//   FormLabel,
+//   FormErrorMessage,
+//   Select,
+//   Input,
+//   Heading,
+//   Text,
+//   useToast,
+//   Button,
+// } from "@chakra-ui/react";
+// import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
+// import supabase from "../../../Supabase-Client/supabase";
+
+// // Map of courses to their prices
+// const priceMap: Record<string, number> = {
+//   "UX Research": 70000,
+//   "Frontend Development": 100000,
+//   "Product Design": 100000,
+// };
+
+// // Zod schema for form validation
+// const RegisterFormSchema = z.object({
+//   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
+//   email: z.string().email({ message: "Enter a valid email address." }),
+//   course: z.string().min(1, { message: "Select a course." }),
+//   learning_mode: z.string().min(1, { message: "Select a learning mode." }),
+//   amount: z.number().min(1, { message: "Invalid price." }),
+// });
+
+// type RegisterFormValues = z.infer<typeof RegisterFormSchema>;
+
+// // Type definition for Flutterwave response
+// type FlutterwaveResponse = {
+//   status: string;
+//   tx_ref: string;
+//   transaction_id?: number;
+//   flw_ref?: string;
+// };
+
+// const RegisterForm = () => {
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [formData, setFormData] = useState<RegisterFormValues | null>(null);
+//   const toast = useToast();
+
+//   const {
+//     register,
+//     handleSubmit,
+//     reset,
+//     watch,
+//     setValue,
+//     formState: { errors },
+//   } = useForm<RegisterFormValues>({
+//     resolver: zodResolver(RegisterFormSchema),
+//     defaultValues: {
+//       name: "",
+//       email: "",
+//       course: "",
+//       learning_mode: "",
+//       amount: 0,
+//     },
+//   });
+
+//   const selectedCourse = watch("course");
+
+//   // Update the amount field when a course is selected
+//   useEffect(() => {
+//     if (selectedCourse && priceMap[selectedCourse]) {
+//       setValue("amount", priceMap[selectedCourse]);
+//     } else {
+//       setValue("amount", 0);
+//     }
+//   }, [selectedCourse, setValue]);
+
+//   // Configuration for Flutterwave payment
+//   // const getFlutterwaveConfig = (data: RegisterFormValues) => ({
+//   //   public_key: import.meta.env.VITE_FLW_PUBLIC_KEY!,
+//   //   tx_ref: `REG_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+//   //   amount: data.amount,
+//   //   currency: "NGN",
+//   //   payment_options: "card,mobilemoney,ussd",
+//   //   customer: {
+//   //     email: data.email,
+//   //     phone_number: "07000000000",
+//   //     name: data.name,
+//   //   },
+//   //   customizations: {
+//   //     title: "Course Registration Payment",
+//   //     description: `Payment for ${data.course} - ${data.learning_mode}`,
+//   //     logo: "https://res.cloudinary.com/dktrwqio1/image/upload/v1729855347/NYRadio/Colored_Logo__2_-removebg-preview_tppkrv.png",
+//   //   },
+//   // });
+
+//   const getFlutterwaveConfig = (data: RegisterFormValues) => ({
+//     public_key: import.meta.env.VITE_FLW_PUBLIC_KEY!,
+//     tx_ref: `REG_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+//     amount: data.amount,
+//     currency: "NGN",
+//     payment_options: "card,mobilemoney,ussd",
+//     customer: {
+//       email: data.email,
+//       phone_number: "07000000000",
+//       name: data.name,
+//     },
+//     customizations: {
+//       title: "Course Registration Payment",
+//       description: `Payment for ${data.course} - ${
+//         data.learning_mode
+//       }\n\nCourse Fee: ₦${priceMap[
+//         data.course
+//       ].toLocaleString()}\nMerchant Fee: ₦${
+//         priceMap[data.course] < 100000 ? 1030 : 2200
+//       }\nTotal: ₦${data.amount.toLocaleString()}`,
+//       logo: "https://res.cloudinary.com/dktrwqio1/image/upload/v1729855347/NYRadio/Colored_Logo__2_-removebg-preview_tppkrv.png",
+//     },
+//   });
+
+//   const initiateFlutterwave = useFlutterwave(
+//     formData ? getFlutterwaveConfig(formData) : ({} as any)
+//   );
+
+//   useEffect(() => {
+//     if (!formData) return;
+
+//     console.log("🚀 Starting payment for:", formData);
+
+//     initiateFlutterwave({
+//       callback: async (response: FlutterwaveResponse) => {
+//         console.log("Payment response:", response);
+
+//         closePaymentModal();
+
+//         if (
+//           response.status === "successful" &&
+//           response.tx_ref &&
+//           response.transaction_id
+//         ) {
+//           try {
+//             // FIX: The amount is now passed as a number, not a string.
+//             // This prevents a data type mismatch error on the Supabase side.
+//             const { error, data } = await supabase
+//               .from("New_User_Registration")
+//               .insert([
+//                 {
+//                   name: formData.name,
+//                   email: formData.email,
+//                   course: formData.course,
+//                   learning_mode: formData.learning_mode,
+//                   amount: formData.amount, // Changed from formData.amount.toString()
+//                   tx_ref: response.tx_ref,
+//                   status: response.status,
+//                   transaction_id: response.transaction_id,
+//                   Date: new Date().toISOString(),
+//                 },
+//               ])
+//               .select();
+
+//             if (error) {
+//               console.error(
+//                 "Supabase Insert Error:",
+//                 error.message,
+//                 error.details,
+//                 error.hint
+//               );
+//               toast({
+//                 title: "Database Error",
+//                 description:
+//                   "Payment went through but saving registration failed. Please check the console for details.",
+//                 status: "warning",
+//                 duration: 5000,
+//                 isClosable: true,
+//                 position: "top",
+//               });
+//             } else {
+//               console.log("Supabase insert successful:", data);
+//               toast({
+//                 title: "Registration Complete ✅",
+//                 description: "Your payment and registration were successful!",
+//                 status: "success",
+//                 duration: 5000,
+//                 isClosable: true,
+//                 position: "top",
+//               });
+//               reset();
+//             }
+//           } catch (err: any) {
+//             console.error("Unexpected error:", err.message);
+//             toast({
+//               title: "Unexpected Error",
+//               description: "Something went wrong. Please try again later.",
+//               status: "error",
+//               duration: 5000,
+//               isClosable: true,
+//               position: "top",
+//             });
+//           }
+//         } else {
+//           toast({
+//             title: "Payment Failed ❌",
+//             description: "Payment did not go through or was cancelled.",
+//             status: "error",
+//             duration: 5000,
+//             isClosable: true,
+//             position: "top",
+//           });
+//         }
+
+//         setIsSubmitting(false);
+//         setFormData(null);
+//       },
+
+//       onClose: () => {
+//         toast({
+//           title: "Payment Cancelled",
+//           description: "You closed the payment modal.",
+//           status: "info",
+//           duration: 3000,
+//           isClosable: true,
+//           position: "top",
+//         });
+//         setIsSubmitting(false);
+//         setFormData(null);
+//       },
+//     });
+//   }, [formData]);
+
+//   const onSubmit = (data: RegisterFormValues) => {
+//     console.log("📝 Form submitted with data:", data);
+
+//     if (data.amount <= 0) {
+//       toast({
+//         title: "Invalid Price",
+//         description: "Please select a course to see the price.",
+//         status: "error",
+//         duration: 5000,
+//         isClosable: true,
+//         position: "top",
+//       });
+//       return;
+//     }
+
+//     if (!import.meta.env.VITE_FLW_PUBLIC_KEY) {
+//       toast({
+//         title: "Configuration Error",
+//         description: "Payment gateway not configured. Please contact support.",
+//         status: "error",
+//         duration: 5000,
+//         isClosable: true,
+//         position: "top",
+//       });
+//       return;
+//     }
+
+//     setIsSubmitting(true);
+//     setFormData(data);
+//   };
+
+//   return (
+//     <Box p={4}>
+//       <Heading textAlign="center">Register for your Course Today</Heading>
+//       <Text textAlign="center" mb={4}>
+//         Input all your details and we will get back to you via email.
+//       </Text>
+//       <Box bg="white" p={4} borderRadius={10}>
+//         <form onSubmit={handleSubmit(onSubmit)}>
+//           <FormControl isInvalid={!!errors.name}>
+//             <FormLabel>Full Name</FormLabel>
+//             <Input placeholder="Full Name" {...register("name")} />
+//             <FormErrorMessage>{errors.name?.message}</FormErrorMessage>
+//           </FormControl>
+
+//           <FormControl isInvalid={!!errors.email}>
+//             <FormLabel mt={4}>Email</FormLabel>
+//             <Input
+//               type="email"
+//               placeholder="you@example.com"
+//               {...register("email")}
+//             />
+//             <FormErrorMessage>{errors.email?.message}</FormErrorMessage>
+//           </FormControl>
+
+//           <FormControl isInvalid={!!errors.course}>
+//             <FormLabel mt={4}>Course</FormLabel>
+//             <Select placeholder="Select" {...register("course")}>
+//               <option value="UX Research">UX Research</option>
+//               <option value="Product Design">Product Design</option>
+//               <option value="Frontend Development">Frontend Development</option>
+//             </Select>
+//             <FormErrorMessage>{errors.course?.message}</FormErrorMessage>
+//           </FormControl>
+
+//           <FormControl isInvalid={!!errors.learning_mode}>
+//             <FormLabel mt={4}>Learning Mode</FormLabel>
+//             <Select placeholder="Select" {...register("learning_mode")}>
+//               <option value="Virtual">Virtual</option>
+//               <option value="Physical" disabled>
+//                 Physical (Unavailable)
+//               </option>
+//             </Select>
+//             <FormErrorMessage>{errors.learning_mode?.message}</FormErrorMessage>
+//           </FormControl>
+
+//           <FormControl isInvalid={!!errors.amount}>
+//             <FormLabel mt={4}>Price</FormLabel>
+//             <Input isReadOnly value={`₦${watch("amount").toLocaleString()}`} />
+//             <FormErrorMessage>{errors.amount?.message}</FormErrorMessage>
+//           </FormControl>
+
+//           <Button
+//             type="submit"
+//             mt={6}
+//             w="full"
+//             bg="#a020f0"
+//             color="white"
+//             isLoading={isSubmitting}
+//             loadingText="Processing..."
+//           >
+//             Submit and Pay
+//           </Button>
+//         </form>
+//       </Box>
+//     </Box>
+//   );
+// };
+
+// export default RegisterForm;
+
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
@@ -2167,25 +2499,31 @@ import {
 import { useFlutterwave, closePaymentModal } from "flutterwave-react-v3";
 import supabase from "../../../Supabase-Client/supabase";
 
-// Map of courses to their prices
+// Normal course prices (no fees)
 const priceMap: Record<string, number> = {
   "UX Research": 70000,
   "Frontend Development": 100000,
   "Product Design": 100000,
 };
 
-// Zod schema for form validation
+// Helper: Add merchant fee
+const calculateTotalWithFee = (baseAmount: number): number => {
+  if (baseAmount === 0) return 0;
+  return baseAmount < 100000 ? baseAmount + 1030 : baseAmount + 2200;
+};
+
+// Form validation
 const RegisterFormSchema = z.object({
   name: z.string().min(2, { message: "Name must be at least 2 characters." }),
   email: z.string().email({ message: "Enter a valid email address." }),
   course: z.string().min(1, { message: "Select a course." }),
   learning_mode: z.string().min(1, { message: "Select a learning mode." }),
-  amount: z.number().min(1, { message: "Invalid price." }),
+  amount: z.number().min(1, { message: "Invalid price." }), // this is ONLY base price
 });
 
 type RegisterFormValues = z.infer<typeof RegisterFormSchema>;
 
-// Type definition for Flutterwave response
+// Flutterwave response type
 type FlutterwaveResponse = {
   status: string;
   tx_ref: string;
@@ -2212,13 +2550,13 @@ const RegisterForm = () => {
       email: "",
       course: "",
       learning_mode: "",
-      amount: 0,
+      amount: 0, // normal price only
     },
   });
 
   const selectedCourse = watch("course");
 
-  // Update the amount field when a course is selected
+  // Update base price when course changes
   useEffect(() => {
     if (selectedCourse && priceMap[selectedCourse]) {
       setValue("amount", priceMap[selectedCourse]);
@@ -2227,38 +2565,41 @@ const RegisterForm = () => {
     }
   }, [selectedCourse, setValue]);
 
-  // Configuration for Flutterwave payment
-  const getFlutterwaveConfig = (data: RegisterFormValues) => ({
-    public_key: import.meta.env.VITE_FLW_PUBLIC_KEY!,
-    tx_ref: `REG_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-    amount: data.amount,
-    currency: "NGN",
-    payment_options: "card,mobilemoney,ussd",
-    customer: {
-      email: data.email,
-      phone_number: "07000000000",
-      name: data.name,
-    },
-    customizations: {
-      title: "Course Registration Payment",
-      description: `Payment for ${data.course} - ${data.learning_mode}`,
-      logo: "https://res.cloudinary.com/dktrwqio1/image/upload/v1729855347/NYRadio/Colored_Logo__2_-removebg-preview_tppkrv.png",
-    },
-  });
+  // Flutterwave config → use total (base + fee)
+  const getFlutterwaveConfig = (data: RegisterFormValues) => {
+    const totalWithFee = calculateTotalWithFee(data.amount);
+
+    return {
+      public_key: import.meta.env.VITE_FLW_PUBLIC_KEY!,
+      tx_ref: `REG_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+      amount: totalWithFee, // ✅ send base + fee to Flutterwave
+      currency: "NGN",
+      payment_options: "card,mobilemoney,ussd",
+      customer: {
+        email: data.email,
+        phone_number: "07000000000",
+        name: data.name,
+      },
+      customizations: {
+        title: "Course Registration Payment",
+        description: `Payment for ${data.course} - ${data.learning_mode}`,
+        logo: "https://res.cloudinary.com/dktrwqio1/image/upload/v1729855347/NYRadio/Colored_Logo__2_-removebg-preview_tppkrv.png",
+      },
+    };
+  };
 
   const initiateFlutterwave = useFlutterwave(
     formData ? getFlutterwaveConfig(formData) : ({} as any)
   );
 
+  // Handle Flutterwave flow
   useEffect(() => {
     if (!formData) return;
 
-    console.log("🚀 Starting payment for:", formData);
+    const totalWithFee = calculateTotalWithFee(formData.amount);
 
     initiateFlutterwave({
       callback: async (response: FlutterwaveResponse) => {
-        console.log("Payment response:", response);
-
         closePaymentModal();
 
         if (
@@ -2267,9 +2608,7 @@ const RegisterForm = () => {
           response.transaction_id
         ) {
           try {
-            // FIX: The amount is now passed as a number, not a string.
-            // This prevents a data type mismatch error on the Supabase side.
-            const { error, data } = await supabase
+            const { error } = await supabase
               .from("New_User_Registration")
               .insert([
                 {
@@ -2277,49 +2616,31 @@ const RegisterForm = () => {
                   email: formData.email,
                   course: formData.course,
                   learning_mode: formData.learning_mode,
-                  amount: formData.amount, // Changed from formData.amount.toString()
+                  amount: totalWithFee, // ✅ store total (base + fee)
                   tx_ref: response.tx_ref,
                   status: response.status,
                   transaction_id: response.transaction_id,
                   Date: new Date().toISOString(),
                 },
-              ])
-              .select();
+              ]);
 
-            if (error) {
-              console.error(
-                "Supabase Insert Error:",
-                error.message,
-                error.details,
-                error.hint
-              );
-              toast({
-                title: "Database Error",
-                description:
-                  "Payment went through but saving registration failed. Please check the console for details.",
-                status: "warning",
-                duration: 5000,
-                isClosable: true,
-                position: "top",
-              });
-            } else {
-              console.log("Supabase insert successful:", data);
-              toast({
-                title: "Registration Complete ✅",
-                description: "Your payment and registration were successful!",
-                status: "success",
-                duration: 5000,
-                isClosable: true,
-                position: "top",
-              });
-              reset();
-            }
-          } catch (err: any) {
-            console.error("Unexpected error:", err.message);
+            if (error) throw error;
+
             toast({
-              title: "Unexpected Error",
-              description: "Something went wrong. Please try again later.",
-              status: "error",
+              title: "Registration Complete ✅",
+              description: "Your payment and registration were successful!",
+              status: "success",
+              duration: 5000,
+              isClosable: true,
+              position: "top",
+            });
+            reset();
+          } catch (err: any) {
+            console.error("Supabase error:", err.message);
+            toast({
+              title: "Database Error",
+              description: "Payment went through but saving failed.",
+              status: "warning",
               duration: 5000,
               isClosable: true,
               position: "top",
@@ -2339,7 +2660,6 @@ const RegisterForm = () => {
         setIsSubmitting(false);
         setFormData(null);
       },
-
       onClose: () => {
         toast({
           title: "Payment Cancelled",
@@ -2356,24 +2676,10 @@ const RegisterForm = () => {
   }, [formData]);
 
   const onSubmit = (data: RegisterFormValues) => {
-    console.log("📝 Form submitted with data:", data);
-
     if (data.amount <= 0) {
       toast({
         title: "Invalid Price",
         description: "Please select a course to see the price.",
-        status: "error",
-        duration: 5000,
-        isClosable: true,
-        position: "top",
-      });
-      return;
-    }
-
-    if (!import.meta.env.VITE_FLW_PUBLIC_KEY) {
-      toast({
-        title: "Configuration Error",
-        description: "Payment gateway not configured. Please contact support.",
         status: "error",
         duration: 5000,
         isClosable: true,
@@ -2431,8 +2737,9 @@ const RegisterForm = () => {
             <FormErrorMessage>{errors.learning_mode?.message}</FormErrorMessage>
           </FormControl>
 
+          {/* Show ONLY normal price in the form */}
           <FormControl isInvalid={!!errors.amount}>
-            <FormLabel mt={4}>Price</FormLabel>
+            <FormLabel mt={4}>Course Price</FormLabel>
             <Input isReadOnly value={`₦${watch("amount").toLocaleString()}`} />
             <FormErrorMessage>{errors.amount?.message}</FormErrorMessage>
           </FormControl>
